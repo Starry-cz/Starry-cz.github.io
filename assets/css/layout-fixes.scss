@@ -1,0 +1,7 @@
+---
+---
+
+/* 模板在部分断点会隐藏主页入口，这里只修正该结构性问题。 */
+.masthead__menu-home-item {
+  display: block !important;
+}

@@ -1,0 +1,796 @@
+---
+---
+
+/*
+ * 页面排版严格参照 yasen03.github.io/zh/：
+ * 正文字体、字号、行高和主体比例交由 AcadHomepage 原始主题控制。
+ */
+
+/* 顶部导航在宽屏下与参考页一样居中铺开。 */
+@media (min-width: 1280px) {
+  /* 参考页主体上限为 1280px；本站在超宽屏上适度放宽，减少两侧空白。 */
+  #main {
+    max-width: 1440px;
+  }
+
+  .masthead__inner-wrap {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .masthead__menu,
+  .greedy-nav {
+    width: 100%;
+  }
+
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greedy-nav .visible-links {
+    margin: 0 auto;
+  }
+}
+
+/* 将 quiet-cinematic-blue 的深海军蓝气质轻量移植到学术主页背景。 */
+html {
+  background-color: #f1f5fa;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 88% 3%, rgba(69, 113, 169, 0.13) 0%, rgba(69, 113, 169, 0) 32rem),
+    radial-gradient(circle at 4% 58%, rgba(104, 137, 181, 0.075) 0%, rgba(104, 137, 181, 0) 36rem),
+    linear-gradient(180deg, #f4f7fb 0%, #fbfcfe 35%, #f2f6fa 100%);
+}
+
+/* 主体只使用边缘与阴影产生抬升感，内部保持页面原始背景配色。 */
+#main {
+  position: relative;
+  width: calc(100% - 1.5rem);
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  padding-top: 1.35em;
+  padding-bottom: 2em;
+  border: 1px solid rgba(112, 145, 181, 0.07);
+  border-radius: 14px;
+  background: transparent;
+  box-shadow:
+    0 1px 2px rgba(14, 35, 61, 0.035),
+    0 12px 34px rgba(20, 48, 82, 0.09),
+    0 0 18px rgba(20, 48, 82, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width: 47.9375em) {
+  #main {
+    margin-top: 0.75em;
+    margin-bottom: 1.25em;
+    padding-top: 1em;
+    padding-bottom: 1.25em;
+    border-radius: 10px;
+    box-shadow:
+      0 1px 2px rgba(14, 35, 61, 0.03),
+      0 8px 22px rgba(20, 48, 82, 0.065),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* 导航使用深海军蓝、钢蓝与冰蓝，尺寸和栏目间距维持原样。 */
+.masthead {
+  border-bottom-color: rgba(173, 202, 237, 0.22);
+  background: linear-gradient(
+    100deg,
+    rgba(4, 15, 31, 0.985) 0%,
+    rgba(9, 31, 59, 0.985) 48%,
+    rgba(20, 55, 94, 0.98) 100%
+  );
+  box-shadow: 0 8px 26px rgba(4, 18, 40, 0.16);
+}
+
+.greedy-nav {
+  background: transparent;
+}
+
+.greedy-nav a {
+  color: rgba(211, 225, 243, 0.82);
+  transition: color 180ms ease;
+}
+
+.greedy-nav .visible-links a::before {
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #79aee9 0%, #c2d6f3 100%);
+  transform-origin: center;
+}
+
+.greedy-nav .visible-links a:hover,
+.greedy-nav .visible-links a:focus-visible,
+.greedy-nav .visible-links a.is-active {
+  color: #f2f7ff;
+}
+
+.greedy-nav .visible-links a:focus-visible {
+  outline: 2px solid rgba(147, 190, 239, 0.55);
+  outline-offset: 3px;
+}
+
+.greedy-nav .visible-links a:hover::before,
+.greedy-nav .visible-links a:focus-visible::before,
+.greedy-nav .visible-links a.is-active::before {
+  transform: scaleX(1);
+}
+
+.greedy-nav button {
+  background: linear-gradient(135deg, #1d4c7c, #668bb9);
+}
+
+.greedy-nav .hidden-links {
+  border-color: rgba(173, 202, 237, 0.22);
+  background: #0b2341;
+  box-shadow: 0 14px 34px rgba(4, 18, 40, 0.24);
+}
+
+.greedy-nav .hidden-links::before {
+  border-color: rgba(173, 202, 237, 0.22) transparent;
+}
+
+.greedy-nav .hidden-links::after {
+  border-color: #0b2341 transparent;
+}
+
+.greedy-nav .hidden-links li {
+  border-bottom-color: rgba(173, 202, 237, 0.16);
+}
+
+.greedy-nav .hidden-links a:hover,
+.greedy-nav .hidden-links a:focus-visible {
+  background: rgba(116, 159, 210, 0.14);
+  color: #f2f7ff;
+}
+
+/* 桌面端继续使用横向导航，移动端目录在窄屏断点内启用。 */
+.mobile-nav-shell {
+  display: none;
+}
+
+@media (max-width: 57.8125em) {
+  .masthead__menu {
+    position: relative;
+  }
+
+  #site-nav {
+    display: none;
+  }
+
+  .mobile-nav-shell {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-nav-toggle {
+    display: grid;
+    width: 100%;
+    min-height: 44px;
+    grid-template-columns: max-content minmax(0, 1fr) 12px;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid rgba(173, 202, 237, 0.2);
+    border-radius: 6px;
+    background: rgba(116, 159, 210, 0.08);
+    color: #f2f7ff;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .mobile-nav-toggle-label {
+    font-weight: 700;
+  }
+
+  .mobile-nav-current {
+    overflow: hidden;
+    color: rgba(211, 225, 243, 0.78);
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-nav-chevron {
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid #c2d6f3;
+    border-bottom: 2px solid #c2d6f3;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 160ms ease;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-chevron {
+    transform: rotate(225deg) translate(-2px, -2px);
+  }
+
+  .mobile-nav-drawer {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 0.45rem);
+    right: 0;
+    left: 0;
+    max-height: calc(100vh - 5.25rem);
+    margin: 0;
+    padding: 0.4rem;
+    overflow-y: auto;
+    border: 1px solid rgba(173, 202, 237, 0.22);
+    border-radius: 8px;
+    background: rgba(8, 29, 55, 0.985);
+    box-shadow: 0 16px 36px rgba(4, 18, 40, 0.3);
+    list-style: none;
+    animation: mobile-nav-in 160ms ease-out both;
+  }
+
+  .mobile-nav-drawer li + li {
+    border-top: 1px solid rgba(173, 202, 237, 0.1);
+  }
+
+  .mobile-nav-drawer a {
+    display: block;
+    margin: 0;
+    padding: 0.7rem 0.85rem;
+    border-radius: 5px;
+    color: rgba(211, 225, 243, 0.86);
+    text-decoration: none;
+  }
+
+  .mobile-nav-drawer a:hover,
+  .mobile-nav-drawer a:focus-visible,
+  .mobile-nav-drawer a.is-active {
+    background: rgba(116, 159, 210, 0.16);
+    color: #fff;
+    box-shadow: inset 3px 0 0 #79aee9;
+  }
+
+  .mobile-nav-drawer a:focus-visible {
+    outline: 2px solid rgba(147, 190, 239, 0.55);
+    outline-offset: -2px;
+  }
+}
+
+@keyframes mobile-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 左侧个人资料保持头像、姓名和链接沿同一中轴排列。 */
+.sidebar .profile_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar .author__avatar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 使用正方形圆形容器完整呈现原照片，避免裁掉学士帽与证书。 */
+.sidebar div.author__avatar {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  border: 1px solid rgba(93, 132, 169, 0.2);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.72), 0 0 0 6px rgba(93, 132, 169, 0.16);
+}
+
+.sidebar div.author__avatar > img.author__avatar {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+@media (min-width: 57.8125em) {
+  .sidebar div.author__avatar {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media (min-width: 80em) {
+  /* 使用正方形裁切容器等比例放大头像，避免图片被横向或纵向拉伸。 */
+  .sidebar .profile_box {
+    padding-top: 1.25rem;
+  }
+
+  .sidebar div.author__avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.sidebar .author__content,
+.sidebar .author__urls-wrapper,
+.sidebar .author__urls,
+.sidebar .author__education {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .sidebar .author__name {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 57.8125em) {
+  /* 与参考页个人链接列表上方的 1em 留白保持一致。 */
+  .sidebar .author__urls-wrapper {
+    padding-top: 1em;
+  }
+}
+
+.sidebar .author__urls li,
+.sidebar .author__urls li a,
+.sidebar .author__urls li div {
+  padding-left: 0;
+  text-align: center;
+}
+
+/* 个人链接下方补充教育院校，学校名称保留清晰的可点击反馈。 */
+.sidebar .author__education {
+  margin-top: 0.85em;
+  padding-top: 0.75em;
+  border-top: 1px solid rgba(93, 132, 169, 0.1);
+}
+
+.sidebar .author__education p {
+  margin: 0.3em 0;
+  line-height: 1.45;
+}
+
+.sidebar .author__education a {
+  color: #24558c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sidebar .author__education a:hover,
+.sidebar .author__education a:focus-visible {
+  color: #153f70;
+  text-decoration: underline;
+}
+
+.sidebar .author__education a:focus-visible {
+  outline: 2px solid rgba(93, 132, 169, 0.35);
+  outline-offset: 2px;
+}
+
+/* 当前个人栏不使用主题的移动端图标副本，因此直接保留完整链接。 */
+@media (max-width: 57.8125em) {
+  .sidebar .author__urls {
+    position: static;
+    right: auto;
+    display: block !important;
+    margin: 10px 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    list-style: none;
+    z-index: auto;
+  }
+
+  .sidebar .author__urls::before,
+  .sidebar .author__urls::after {
+    display: none;
+  }
+}
+
+/* 研究方向标签采用参考页论文按钮的尺寸与配色。 */
+.research-badge {
+  display: inline-flex;
+  height: 20px;
+  align-items: center;
+  margin: 0 2px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.76em;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.badge-blue {
+  background-color: #536f9f;
+}
+
+.badge-teal {
+  background-color: #3d8790;
+}
+
+.badge-slate {
+  background-color: #9a5b52;
+}
+
+.badge-indigo {
+  background-color: #6a659b;
+}
+
+/* 新闻中的开源项目入口沿用 GitHub 链接与动态 Stars 徽章组合。 */
+.news-repo-meta,
+.news-repo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.news-repo-meta {
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-left: 0.35em;
+  vertical-align: -0.18em;
+}
+
+.news-repo-link {
+  white-space: nowrap;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.news-repo-link > i {
+  margin-right: 0.3em;
+}
+
+.news-repo-stars img {
+  display: block;
+  height: 20px;
+  margin: 0;
+}
+
+.news-repo-stars:hover img,
+.news-repo-stars:focus-visible img {
+  box-shadow: none;
+}
+
+/* 联系信息的图标位于列表圆点附近，使两行文字与上方技能正文自然对齐。 */
+.skills-contact-details {
+  margin: 0.85em 0 0 1em;
+}
+
+.skills-contact-line {
+  display: grid;
+  grid-template-columns: 1.15em minmax(0, 1fr);
+  gap: 0.3em;
+  align-items: baseline;
+  margin: 0.25em 0;
+}
+
+.skills-contact-line > i {
+  color: #4d5358;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* 学术成果沿用参考页的图片—文字双栏比例。 */
+.paper-box {
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
+  --spotlight-opacity: 0;
+  display: flex;
+  position: relative;
+  isolation: isolate;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  padding: 1.2em 0;
+}
+
+/* 光斑只在交互时显示，不改变论文条目的静态排版与文字样式。 */
+.paper-box::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--spotlight-x) var(--spotlight-y),
+    rgba(93, 132, 169, 0.13) 0%,
+    rgba(93, 132, 169, 0.045) 30%,
+    rgba(93, 132, 169, 0) 68%
+  );
+  opacity: var(--spotlight-opacity);
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.paper-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+.paper-box:last-child {
+  border-bottom: none;
+}
+
+/* 第一条成果靠近板块标题，避免封面与标题之间出现过量留白。 */
+#academic-achievements > .paper-box:first-of-type {
+  padding-top: 0.65em;
+}
+
+.project-cover {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 138px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.94);
+  box-shadow: 3px 3px 6px #888;
+}
+
+.project-cover .badge {
+  top: 0.5em;
+  left: -0.5em;
+  margin: 0;
+}
+
+.project-cover-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.project-cover-code {
+  background: linear-gradient(135deg, #344b63, #7d91a4);
+}
+
+.project-cover-agent {
+  background: linear-gradient(135deg, #536f78, #91a9ae);
+}
+
+@media (min-width: 48em) {
+  /* 桌面端适度放大成果封面，同时为右侧文字保留充足宽度。 */
+  .paper-box .paper-box-image {
+    max-width: 43%;
+  }
+
+  .paper-box .paper-box-text {
+    max-width: 57%;
+  }
+
+  .project-cover {
+    min-height: 152px;
+  }
+}
+
+.paper-title {
+  margin-bottom: 0.2em;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.paper-authors,
+.paper-meta,
+.paper-summary {
+  margin: 0.35em 0;
+  font-size: 0.95em;
+}
+
+.paper-meta {
+  color: #555;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.35em;
+}
+
+.paper-links a {
+  text-decoration: none;
+}
+
+.paper-links img {
+  display: block;
+  height: 20px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* 引用按钮沿用参考页尺寸；论文未正式公开前保持禁用，避免产生错误引用。 */
+.paper-badge-text {
+  display: inline-flex;
+  height: 20px;
+  align-items: center;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #5f6f8a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.76em;
+  line-height: 20px;
+}
+
+.paper-badge-text.citation-trigger {
+  padding: 0 6px;
+  background-color: #4d6a86;
+  font-size: 0.74em;
+}
+
+.paper-badge-text.citation-trigger:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+/* 专利与版权标题使用官网标识的图形部分，文字保持正文主题样式。 */
+.official-logo-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  vertical-align: -0.18em;
+}
+
+.official-logo-link:hover,
+.official-logo-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.official-logo {
+  display: inline-flex;
+  width: 1.28em;
+  height: 1.28em;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 0.35em;
+  overflow: hidden;
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+.official-logo img {
+  display: block;
+  width: 150%;
+  max-width: none;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+/* 专利局徽使用完整画面，不沿用版权标识的局部放大裁切。 */
+.official-logo-patent {
+  align-items: center;
+}
+
+.official-logo-patent img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 锚点只负责定位，不参与可见排版。 */
+.section-anchor {
+  display: block;
+  height: 0;
+  margin: 0;
+  scroll-margin-top: 4.5em;
+}
+
+[data-nav-section] {
+  scroll-margin-top: 4.5em;
+}
+
+/* 分隔线位于新板块标题之前，用来区分上一板块内容。 */
+.page__content [data-nav-section]:not(#about-me) {
+  margin-top: 1.25em;
+  border-top: 1px solid rgba(93, 132, 169, 0.1);
+}
+
+.page__content [data-nav-section] > h1 {
+  margin-bottom: 0.7em;
+  padding: 0.38em 0.62em;
+  border-bottom: 0;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 132, 169, 0.18) 0%,
+    rgba(116, 159, 210, 0.09) 58%,
+    rgba(116, 159, 210, 0) 100%
+  );
+}
+
+.page__content [data-nav-section]:not(#about-me) > h1 {
+  margin-top: 0.5em;
+}
+
+/* 仅在支持精确悬停的设备上启用新闻与论文的轻量响应。 */
+@media (hover: hover) {
+  #news li,
+  .paper-box {
+    transition: transform 180ms ease;
+  }
+
+  #news li {
+    position: relative;
+  }
+
+  #news li::before {
+    content: "";
+    position: absolute;
+    top: 0.14em;
+    bottom: 0.14em;
+    left: -0.72em;
+    width: 3px;
+    border-radius: 999px;
+    background: #5d84a9;
+    opacity: 0;
+    transform: scaleY(0.18);
+    transform-origin: center;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  #news li:hover,
+  #news li:focus-within {
+    transform: translateX(4px);
+  }
+
+  #news li:hover::before,
+  #news li:focus-within::before {
+    opacity: 0.9;
+    transform: scaleY(1);
+  }
+
+  .paper-box:hover,
+  .paper-box:focus-within {
+    --spotlight-opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 47.9375em) {
+  .project-cover {
+    margin-top: 1em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #news li,
+  #news li::before,
+  .paper-box,
+  .paper-box::before,
+  .mobile-nav-chevron {
+    transition: none;
+  }
+
+  .mobile-nav-drawer {
+    animation: none;
+  }
+}

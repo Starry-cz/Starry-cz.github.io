@@ -1,0 +1,51 @@
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div itemscope itemtype="https://schema.org/Person" class="profile_box">
+  <div class="author__avatar">
+    <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}">
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
+  </div>
+
+  <!-- 学术账号尚未创建时，链接在 _config.yml 中统一指向 GitHub 占位页。 -->
+  <div class="author__urls-wrapper">
+    <ul class="author__urls social-icons" aria-label="个人与学术链接">
+      <li>
+        <a href="{{ author.googlescholar }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>
+          <span>Google Scholar</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ author.github }}" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ author.orcid }}" target="_blank" rel="noopener noreferrer">
+          <i class="ai ai-orcid-square ai-fw" aria-hidden="true"></i>
+          <span>ORCID</span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:{{ author.email }}">
+          <i class="fas fa-fw fa-envelope" aria-hidden="true"></i>
+          <span>Email</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 教育院校名称链接至学校官网。 -->
+  <div class="author__education" aria-label="教育院校">
+    <p>硕士：<a href="https://www.scnu.edu.cn/" target="_blank" rel="noopener noreferrer">华南师范大学</a></p>
+    <p>本科：<a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">广东技术师范大学</a></p>
+  </div>
+</div>

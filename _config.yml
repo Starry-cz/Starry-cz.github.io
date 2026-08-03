@@ -1,0 +1,119 @@
+# 站点基础信息
+title: "Zifan Cheng's Homepage"
+description: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
+url: ""
+baseurl: ""
+# 发布前替换为“GitHub用户名/GitHub用户名.github.io”。
+repository: "YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io"
+google_scholar_stats_use_cdn: false
+
+# 统计与站长验证（获得对应 ID 后再填写）
+google_analytics_id:
+google_site_verification:
+bing_site_verification:
+baidu_site_verification:
+
+# 个人信息
+author:
+  name: "程子凡"
+  avatar: "images/cheng-zifan-graduation.jpg"
+  bio: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
+  location: "广东，中国"
+  employer: "广东技术师范大学"
+  email: "chengzi@stu.gpnu.edu.cn"
+  uri:
+  github: "https://github.com/Starry-cz"
+  # Google Scholar 与 ORCID 尚未提供，暂时统一使用 GitHub 主页占位。
+  googlescholar: "https://github.com/Starry-cz"
+  researchgate:
+  dblp:
+  orcid: "https://github.com/Starry-cz"
+  linkedin:
+
+# 内容与构建
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - docs
+  - google_scholar_crawler
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - LICENSE
+  - README.md
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author_profile: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

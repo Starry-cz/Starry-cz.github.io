@@ -1,0 +1,6 @@
+_site/
+push.sh
+.DS_Store
+.playwright-cli/
+# 本地预览生成目录，不发布到 GitHub Pages 源码仓库。
+site-render/

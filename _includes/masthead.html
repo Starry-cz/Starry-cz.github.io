@@ -1,0 +1,41 @@
+<header class="masthead" aria-label="主导航">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <!-- 移动端使用完整页面目录，避免多级折叠菜单遮挡正文。 -->
+      <div class="mobile-nav-shell">
+        <button
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav-drawer"
+        >
+          <span class="mobile-nav-toggle-label">页面目录</span>
+          <span class="mobile-nav-current">主页</span>
+          <span class="mobile-nav-chevron" aria-hidden="true"></span>
+        </button>
+        <ul id="mobile-nav-drawer" class="mobile-nav-drawer" hidden>
+          <li><a href="{{ '/#home' | relative_url }}" target="_self">主页</a></li>
+          {% for link in site.data.navigation.main %}
+            <li><a href="{{ link.url | relative_url }}" target="_self">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <nav id="site-nav" class="greedy-nav" aria-label="页面板块">
+        <button type="button" aria-label="展开导航菜单"><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
+            <a href="{{ '/#home' | relative_url }}" target="_self">主页</a>
+          </li>
+          {% for link in site.data.navigation.main %}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}" target="_self">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</header>
