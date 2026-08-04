@@ -88,7 +88,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="academic-achievements" data-nav-section markdown="1">
 
-<h2 id="academic-work-heading" class="section-heading">📝 Academic Work</h2>
+<h2 id="academic-work-heading" class="section-heading">📝Academic Work (I’ll update this section after publishing a CCF-A paper 😭)</h2>
 
 <div class="paper-box">
   <div class="paper-box-image">

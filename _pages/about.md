@@ -85,7 +85,7 @@ author_profile: true
 
 <section id="academic-achievements" data-nav-section markdown="1">
 
-<h2 id="academic-work-heading" class="section-heading">📝 学术成果</h2>
+<h2 id="academic-work-heading" class="section-heading">📝学术成果（等我发CCFA再更新这部分😭）</h2>
 
 <div class="paper-box">
   <div class="paper-box-image">
