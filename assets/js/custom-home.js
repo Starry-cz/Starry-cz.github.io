@@ -28,16 +28,6 @@
   const openDirectoryLabel = isChinesePage ? "打开页面目录" : "Open section directory";
   const closeDirectoryLabel = isChinesePage ? "关闭页面目录" : "Close section directory";
 
-  /*
-   * 旧主题会给所有链接绑定固定 -20px 的滚动偏移，无法适配现在的固定导航高度。
-   * 主脚本加载完成后移除该旧监听，交给 CSS 的 scroll-margin 处理。
-   */
-  window.jQuery(() => {
-    window
-      .jQuery("a[href^='#'], a[href^='/#'], a[href^='/zh/#']")
-      .off("click.smoothscroll");
-  });
-
   // 将当前板块对应的导航链接标为激活，并同步移动端按钮中的板块名称。
   const setActiveSection = (activeId) => {
     let activeTitle = "";
@@ -148,8 +138,20 @@
     if (scrollKeys.has(event.key)) clearNavigationSelection();
   });
   window.addEventListener("resize", requestActiveSectionUpdate);
-  // 两个尾部板块可能共享同一滚动位置，锚点变化时也要立即刷新高亮。
-  window.addEventListener("hashchange", requestActiveSectionUpdate);
+
+  // 浏览器前进/后退会直接恢复 URL 中的锚点，必须同步覆盖上一次点击留下的选择。
+  // 否则正文虽然回到旧板块，导航仍会被 selectedNavigationId 的旧值锁定。
+  const syncNavigationSelectionFromHash = () => {
+    const hashId = decodeURIComponent(window.location.hash.slice(1));
+    selectedNavigationId = navLinks.some((link) => {
+      return new URL(link.href, window.location.href).hash.slice(1) === hashId;
+    })
+      ? hashId
+      : "";
+    requestActiveSectionUpdate();
+  };
+
+  window.addEventListener("hashchange", syncNavigationSelectionFromHash);
   requestActiveSectionUpdate();
 
   // 统一关闭移动端目录，并同步无障碍属性与按钮提示文字。

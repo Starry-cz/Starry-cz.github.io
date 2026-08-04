@@ -829,7 +829,8 @@ html[lang="en"] .mobile-nav-drawer a {
   border-top: 1px solid rgba(93, 132, 169, 0.1);
 }
 
-.page__content [data-nav-section] > h1 {
+.page__content [data-nav-section] > .section-heading {
+  font-size: 1.4em;
   margin-bottom: 0.7em;
   padding: 0.38em 0.62em;
   border-bottom: 0;
@@ -842,8 +843,13 @@ html[lang="en"] .mobile-nav-drawer a {
   );
 }
 
-.page__content [data-nav-section]:not(#about-me) > h1 {
+.page__content [data-nav-section]:not(#about-me) > .section-heading {
   margin-top: 0.5em;
+}
+
+/* 专利与软著降为三级语义标题，但保持原二级标题的可见字号与间距。 */
+.page__content .ip-subheading {
+  font-size: 1.2em;
 }
 
 /* 仅在支持精确悬停的设备上启用新闻与论文的轻量响应。 */

@@ -1,4 +1,7 @@
 _site/
+node_modules/
+test-results/
+playwright-report/
 push.sh
 .DS_Store
 .playwright-cli/

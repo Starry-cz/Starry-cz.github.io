@@ -22,9 +22,11 @@ layout: compress
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
         <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
+          <div class="page__content" itemprop="text">
+            <!-- 页面只保留一个语义主标题；视觉隐藏，避免改变现有主页排版。 -->
+            <h1 class="screen-reader-text">{{ page.seo_title | default: site.title }}</h1>
             {{ content }}
-          </section>
+          </div>
         </div>
       </article>
     </div>

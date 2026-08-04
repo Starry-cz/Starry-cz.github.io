@@ -65,7 +65,7 @@
   </div>
 
   <!-- 院校信息当前直接写在模板中；修改学校名称时要同时更新 href 官网地址。 -->
-  <div class="author__education" aria-label="{{ education_label }}">
+  <div class="author__education" role="group" aria-label="{{ education_label }}">
     {% if page.lang == "zh-CN" %}
       <p>本科：<a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">广东技术师范大学</a></p>
     {% else %}

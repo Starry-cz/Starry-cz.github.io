@@ -75,6 +75,10 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
+  - playwright.config.mjs
+  - scripts
+  - tests
   - tmp
   - vendor
 keep_files:
