@@ -46,7 +46,9 @@
 
 /* 将 quiet-cinematic-blue 的深海军蓝气质轻量移植到学术主页背景。 */
 html {
+  --sticky-nav-offset: 4.5rem;
   background-color: #f1f5fa;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -89,6 +91,19 @@ button:focus-visible {
 
 #main:focus {
   outline: none;
+}
+
+/*
+ * 原主题通过 -10em 负外边距抬高“关于我”，会把顶部内容推到固定导航后方，
+ * 导致滚动条已经到顶时仍看不到完整正文。这里恢复正常文档流。
+ */
+.page__content #about-me {
+  margin-top: 0;
+}
+
+.page__content #about-me::before {
+  content: none;
+  display: none;
 }
 
 /* 主体只使用边缘与阴影产生抬升感，内部保持页面原始背景配色。 */
@@ -800,11 +815,12 @@ html[lang="en"] .mobile-nav-drawer a {
   display: block;
   height: 0;
   margin: 0;
-  scroll-margin-top: 4.5em;
+  scroll-margin-top: var(--sticky-nav-offset);
 }
 
+#main,
 [data-nav-section] {
-  scroll-margin-top: 4.5em;
+  scroll-margin-top: var(--sticky-nav-offset);
 }
 
 /* 分隔线位于新板块标题之前，用来区分上一板块内容。 */

@@ -28,6 +28,16 @@
   const openDirectoryLabel = isChinesePage ? "打开页面目录" : "Open section directory";
   const closeDirectoryLabel = isChinesePage ? "关闭页面目录" : "Close section directory";
 
+  /*
+   * 旧主题会给所有链接绑定固定 -20px 的滚动偏移，无法适配现在的固定导航高度。
+   * 主脚本加载完成后移除该旧监听，交给 CSS 的 scroll-margin 处理。
+   */
+  window.jQuery(() => {
+    window
+      .jQuery("a[href^='#'], a[href^='/#'], a[href^='/zh/#']")
+      .off("click.smoothscroll");
+  });
+
   // 将当前板块对应的导航链接标为激活，并同步移动端按钮中的板块名称。
   const setActiveSection = (activeId) => {
     let activeTitle = "";
@@ -54,14 +64,20 @@
   const updateActiveSection = () => {
     const documentHeight = document.documentElement.scrollHeight;
     const reachedPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
-    const secondSectionTop = sections[1].getBoundingClientRect().top;
-    const keepAboutActive = secondSectionTop > window.innerHeight * 0.34;
+    const mastheadBottom = document.querySelector(".masthead").getBoundingClientRect().bottom;
+    const readingLine = mastheadBottom + 24;
     let activeSection = sections[0];
+
+    // 页面最上方对应“主页”；离开顶部后再根据正文板块更新高亮。
+    if (window.scrollY <= 24) {
+      setActiveSection("home");
+      activeSectionFrame = 0;
+      return;
+    }
 
     if (reachedPageBottom) {
       activeSection = sections[sections.length - 1];
-    } else if (!keepAboutActive) {
-      const readingLine = window.innerHeight * 0.48;
+    } else {
       for (const section of sections) {
         if (section.getBoundingClientRect().top > readingLine) break;
         activeSection = section;

@@ -15,6 +15,8 @@ baseurl: ""
 repository: "Starry-cz/Starry-cz.github.io"
 # 社交平台分享时使用原始毕业照；路径必须对应仓库内真实存在的文件。
 og_image: "/images/cheng-zifan-graduation.jpg"
+# 尚未启用 Google Scholar 自动统计时保持关闭，避免请求不存在的数据文件。
+google_scholar_stats_enabled: false
 google_scholar_stats_use_cdn: false
 
 # 统计与站长验证（获得对应 ID 后再填写）
