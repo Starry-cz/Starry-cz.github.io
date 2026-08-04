@@ -1,3 +1,7 @@
+<!--
+  个人信息侧栏：姓名、头像和账号网址主要来自 _config.yml 的 author 配置。
+  只更换账号或头像时请优先修改配置，不需要直接改这里的 Liquid 模板。
+-->
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}
 {% else %}
@@ -51,7 +55,7 @@
     </ul>
   </div>
 
-  <!-- 教育院校名称链接至学校官网。 -->
+  <!-- 院校信息当前直接写在模板中；修改学校名称时要同时更新 href 官网地址。 -->
   <div class="author__education" aria-label="教育院校">
     <p>本科：<a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">广东技术师范大学</a></p>
   </div>

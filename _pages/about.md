@@ -8,6 +8,14 @@ redirect_from:
   - /about.html
 ---
 
+<!--
+  主页正文维护说明：
+  1. 每个 <section> 对应一个导航板块，id 必须与 _data/navigation.yml 中的链接一致。
+  2. data-nav-section 用于滚动时高亮导航；markdown="1" 允许板块内继续使用 Markdown。
+  3. 只更新文字时，请保留 section 的开始标签和结尾 </section>。
+  4. **文字** 表示粗体，[文字](网址) 表示链接；更完整示例见项目 README.md。
+-->
+
 <span id="home" class="section-anchor" aria-hidden="true"></span>
 
 <section id="about-me" data-nav-section markdown="1">

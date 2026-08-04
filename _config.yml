@@ -1,10 +1,19 @@
-# 站点基础信息
+# =============================================================================
+# Jekyll 站点配置（零基础修改提示）
+# 1. 最常修改的是“站点基础信息”和“个人信息”两块。
+# 2. YAML 依靠空格缩进表示层级；author 下方字段前必须保留两个空格。
+# 3. 冒号后要留一个空格，包含特殊字符的文字建议放在英文双引号内。
+# 4. 修改后若构建失败，首先检查缩进、引号和图片路径。
+# =============================================================================
+
+# 站点基础信息：用于浏览器标题、搜索结果和社交平台链接预览。
 title: "Zifan Cheng's Homepage"
 description: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
+# url 填写正式域名且末尾不加斜杠；用户主页的 baseurl 保持为空。
 url: "https://starry-cz.github.io"
 baseurl: ""
 repository: "Starry-cz/Starry-cz.github.io"
-# 社交平台分享时使用原始毕业照，兼容常见的链接预览抓取器。
+# 社交平台分享时使用原始毕业照；路径必须对应仓库内真实存在的文件。
 og_image: "/images/cheng-zifan-graduation.jpg"
 google_scholar_stats_use_cdn: false
 
@@ -14,7 +23,7 @@ google_site_verification:
 bing_site_verification:
 baidu_site_verification:
 
-# 个人信息
+# 个人信息：头像下方的账号链接由 _includes/author-profile.html 读取这些字段。
 author:
   name: "程子凡"
   avatar: "images/cheng-zifan-graduation.webp"
@@ -24,14 +33,15 @@ author:
   email: "chengzi@stu.gpnu.edu.cn"
   uri:
   github: "https://github.com/Starry-cz"
-  # Google Scholar 与 ORCID 尚未提供，暂时统一使用 GitHub 主页占位。
+  # Google Scholar 与 ORCID 尚未提供，当前统一使用 GitHub 主页占位。
+  # 创建真实账号后，只需替换下方网址，无需修改 HTML。
   googlescholar: "https://github.com/Starry-cz"
   researchgate:
   dblp:
   orcid: "https://github.com/Starry-cz"
   linkedin:
 
-# 内容与构建
+# 内容与构建：以下选项决定 Jekyll 读取和忽略哪些文件，一般无需修改。
 include:
   - .htaccess
   - _pages

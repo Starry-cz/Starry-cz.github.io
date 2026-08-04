@@ -1,8 +1,12 @@
+# GitHub Pages 自动发布流程，新手通常不需要修改本文件。
+# 流程：推送 main 分支 → Jekyll 构建网页 → 上传产物 → 发布到 Pages。
 name: Build and deploy GitHub Pages
 
 on:
+  # 每次向 main 分支推送代码时自动执行。
   push:
     branches: ["main"]
+  # 同时保留 Actions 页面中的“手动运行”按钮。
   workflow_dispatch:
 
 # 仅授予读取源码和发布 Pages 所需的最小权限。
@@ -12,11 +16,13 @@ permissions:
   id-token: write
 
 concurrency:
+  # 同一时间只保留最新一次发布，连续提交时不会部署旧版本。
   group: "pages"
   cancel-in-progress: true
 
 jobs:
   build:
+    # build 任务负责把源码转换为 _site 静态网页。
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
@@ -35,6 +41,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
 
   deploy:
+    # deploy 必须等待 build 成功，再把构建产物发布到 GitHub Pages。
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

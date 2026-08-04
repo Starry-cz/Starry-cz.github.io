@@ -1,4 +1,6 @@
-# 顶部导航顺序与主页正文保持一致。
+# 顶部导航配置：数组顺序就是页面中的显示顺序。
+# title 是访客看到的名称；url 中 # 后的文字必须与 _pages/about.md 的 section id 完全一致。
+# 例如 url: "/#education" 对应 <section id="education" ...>。
 main:
   - title: "关于我"
     url: "/#about-me"

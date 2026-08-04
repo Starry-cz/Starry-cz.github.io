@@ -1,7 +1,17 @@
 (function () {
   "use strict";
 
+  /*
+   * 主页交互脚本（只负责行为，不保存主页文字）：
+   * - 导航名称和顺序：修改 _data/navigation.yml。
+   * - 正文板块：修改 _pages/about.md。
+   * - 颜色和动画时长：修改 assets/css/custom.scss。
+   * 初学者只更新内容时，无需修改本文件。
+   */
+
+  // 浏览器开启“减少动态效果”时，停用非必要动画，避免引起不适。
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // 下列选择器从 HTML 中找到板块、导航链接和交互控件，供后面的逻辑使用。
   const sections = Array.from(document.querySelectorAll("[data-nav-section]"));
   const navLinks = Array.from(
     document.querySelectorAll("#site-nav a[href*='#'], #mobile-nav-drawer a[href*='#']")
@@ -15,7 +25,7 @@
   const mobileNavCurrent = document.querySelector(".mobile-nav-current");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  // 按视口阅读线同步导航，短小的末尾板块也能依次获得激活状态。
+  // 将当前板块对应的导航链接标为激活，并同步移动端按钮中的板块名称。
   const setActiveSection = (activeId) => {
     let activeTitle = "";
 
@@ -37,6 +47,7 @@
 
   let activeSectionFrame = 0;
 
+  // 根据滚动位置判断正在阅读哪个板块；到达页面底部时直接激活最后一项。
   const updateActiveSection = () => {
     const documentHeight = document.documentElement.scrollHeight;
     const reachedPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
@@ -58,6 +69,7 @@
     activeSectionFrame = 0;
   };
 
+  // requestAnimationFrame 把同一帧内的多次滚动事件合并，减少重复计算。
   const requestActiveSectionUpdate = () => {
     if (activeSectionFrame) return;
     activeSectionFrame = window.requestAnimationFrame(updateActiveSection);
@@ -67,7 +79,7 @@
   window.addEventListener("resize", requestActiveSectionUpdate);
   requestActiveSectionUpdate();
 
-  // 移动端目录使用独立抽屉，并同步按钮的展开状态。
+  // 统一关闭移动端目录，并同步无障碍属性与按钮提示文字。
   const closeMobileNav = () => {
     if (!mobileNavToggle || !mobileNavDrawer) return;
     mobileNavToggle.setAttribute("aria-expanded", "false");
@@ -75,6 +87,7 @@
     mobileNavDrawer.hidden = true;
   };
 
+  // 只有页面上同时存在按钮和目录时才绑定交互，避免访问不存在的元素。
   if (mobileNavToggle && mobileNavDrawer) {
     mobileNavToggle.addEventListener("click", () => {
       const willOpen = mobileNavToggle.getAttribute("aria-expanded") !== "true";
@@ -99,7 +112,7 @@
     });
   }
 
-  // 手机端选择板块后自动收起折叠菜单，避免菜单遮挡正文。
+  // 兼容主题原有的折叠菜单：选择板块后自动收起，避免遮挡正文。
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       if (menuButton && hiddenMenu && !hiddenMenu.classList.contains("hidden")) {
@@ -108,7 +121,7 @@
     });
   });
 
-  // 进入视口时展示正文块；减少动态效果模式下直接显示。
+  // 正文进入视口时添加 is-visible；CSS 读取该类名并播放淡入动画。
   if (reducedMotion) {
     revealBlocks.forEach((block) => block.classList.add("is-visible"));
   } else {
