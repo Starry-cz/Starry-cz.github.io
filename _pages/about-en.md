@@ -78,11 +78,11 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 # 📚 Research Projects
 
-- **2023.05 - 2024.05 | Intelligent Traffic Height-Restriction Warning System Based on Binocular Vision Perception.** Key-Area Undergraduate Innovation and Entrepreneurship Training Program; Principal Investigator.
-- **2024.05 - 2025.05 | Eco-Friendly Corn Pest Management and Intelligent Water–Fertilizer Management Platform Based on Multi-Source Data Fusion.** National Undergraduate Innovation and Entrepreneurship Training Program; Participant.
-- **2025.05 - 2027.05 | Development of a DeepSeek-R1-Based Adaptive Multimodal Programming Education Large Model and Intelligent Teaching System.** Guangdong Provincial Science and Technology Innovation Strategy Special Project; Principal Investigator.
-- **2025.05 - 2027.05 | Uninterruptible Intelligent Electronic Control Platform Centered on Large-Capacity Energy-Storage Lithium–Sulfur Batteries.** Key Guangdong Provincial Science and Technology Innovation Strategy Special Project; Participant.
-- **2025.05 - 2026.05 | Immersive AI Talent Development System Integrating Multimodal Digital Humans with a Context-Adaptive Large Model.** National Undergraduate Innovation and Entrepreneurship Training Program; Participant.
+- **2023.05 - 2024.05｜Intelligent Traffic Height-Restriction Warning System Based on Binocular Vision Perception.** Key-Area Undergraduate Innovation and Entrepreneurship Training Program; Principal Investigator.
+- **2024.05 - 2025.05｜Eco-Friendly Corn Pest Management and Intelligent Water–Fertilizer Management Platform Based on Multi-Source Data Fusion.** National Undergraduate Innovation and Entrepreneurship Training Program; Participant.
+- **2025.05 - 2027.05｜Development of a DeepSeek-R1-Based Adaptive Multimodal Programming Education Large Model and Intelligent Teaching System.** Guangdong Provincial Science and Technology Innovation Strategy Special Project; Principal Investigator.
+- **2025.05 - 2027.05｜Uninterruptible Intelligent Electronic Control Platform Centered on Large-Capacity Energy-Storage Lithium–Sulfur Batteries.** Key Guangdong Provincial Science and Technology Innovation Strategy Special Project; Participant.
+- **2025.05 - 2026.05｜Immersive AI Talent Development System Integrating Multimodal Digital Humans with a Context-Adaptive Large Model.** National Undergraduate Innovation and Entrepreneurship Training Program; Participant.
 
 </section>
 
@@ -187,7 +187,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="skills-contact" data-nav-section markdown="1">
 
-# 🛠️ Skills & Contact
+# 🛠️ Skills and Contact
 
 - **Artificial Intelligence and Modeling:** Python, PyTorch, and Hugging Face Transformers; familiarity with TensorFlow and PaddlePaddle; experience in model development, training and optimization, transfer learning, parameter-efficient fine-tuning, and modular research code.
 - **Multimodal Learning:** OpenCV, Pillow, Librosa, Torchaudio, and FFmpeg; text, image, speech, and video processing; cross-modal alignment, representation learning, dynamic fusion, and missing-modality modeling.
@@ -211,10 +211,10 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="internships-work" data-nav-section markdown="1">
 
-# 💼 Internships & Experience
+# 💼 Internships and Experience
 
-- **2024.06 - 2024.10 | Guangzhou Weiyue Communication Equipment Co., Ltd.**, Data Developer.
-- **2025.03 - 2025.07 | iFLYTEK Co., Ltd.**, AI Product Manager.
-- **2025.08 - 2025.11 | Guangdong Zhinong Fangchuang Technology Co., Ltd.**, Algorithm Engineer.
+- **2024.06 - 2024.10｜Guangzhou Weiyue Communication Equipment Co., Ltd.**, Data Developer.
+- **2025.03 - 2025.07｜iFLYTEK Co., Ltd.**, AI Product Manager.
+- **2025.08 - 2025.11｜Guangdong Zhinong Fangchuang Technology Co., Ltd.**, Algorithm Engineer.
 
 </section>
