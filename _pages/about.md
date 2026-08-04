@@ -1,11 +1,10 @@
 ---
-permalink: /
+permalink: /zh/
 title: ""
-excerpt: "Zifan Cheng's personal academic homepage."
+seo_title: "程子凡的个人主页"
+excerpt: "程子凡的个人学术主页，研究方向包括多模态学习、情感计算、智能体与教育人工智能。"
+lang: "zh-CN"
 author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
 ---
 
 <!--
@@ -29,6 +28,8 @@ redirect_from:
 本科期间主持或参与科研项目 **5 项**，以第一作者或第二作者发表学术论文 **2 篇**、申请国家发明专利 **6 项**、软件著作权 **11 项**；主持研发的相关平台累计服务用户 **12,529 名**，覆盖 **12 所**院校及企业。
 
 联系方式：[chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
+
+<div class="language-switch" aria-label="语言选择"><a href="{{ '/' | relative_url }}" lang="en">English</a><span aria-hidden="true">/</span><strong aria-current="page">中文</strong></div>
 
 </section>
 
@@ -133,7 +134,7 @@ redirect_from:
 
 # 🛡️ 专利版权
 
-## <a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="images/patent-logo.jpg" alt="国家知识产权局局徽"></span></a>专利
+## <a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="{{ '/images/patent-logo.jpg' | relative_url }}" alt="国家知识产权局局徽"></span></a>专利
 
 - **CN121073716A**，一种基于大语言模型的交互式实时循环反馈的编程教学方法及系统，已公开，第一作者。
 - **CN121352715A**，一种基于微服务架构的在线交互式编程教育系统及方法，已公开，第二作者。
@@ -144,7 +145,7 @@ redirect_from:
 - **2024230994941**，一种车辆限高安全提示装置，已受理，第二作者。
 - **2024115974965**，一种高效纳米碳材料、制备方法及其在锂硫电池中的应用，已受理，第二作者。
 
-## <a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="images/copyright-logo.jpg" alt="中国版权保护中心标识"></span></a>软件著作权
+## <a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="中国版权保护中心标识"></span></a>软件著作权
 
 - **2026SR0181516**，EduMind Lite 智能体教育平台 V1.0，已授权，第一作者。
 - **2025SR1553286**，交互式编程课程学习平台 V1.0，已授权，第一作者。

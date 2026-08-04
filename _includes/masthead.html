@@ -1,8 +1,24 @@
-<header class="masthead" aria-label="主导航">
+{% if page.lang == "zh-CN" %}
+  {% assign nav_links = site.data.navigation.zh %}
+  {% assign home_url = "/zh/#home" %}
+  {% assign home_label = "主页" %}
+  {% assign directory_label = "页面目录" %}
+  {% assign nav_aria_label = "主导航" %}
+  {% assign expand_label = "展开导航菜单" %}
+{% else %}
+  {% assign nav_links = site.data.navigation.en %}
+  {% assign home_url = "/#home" %}
+  {% assign home_label = "Home" %}
+  {% assign directory_label = "Sections" %}
+  {% assign nav_aria_label = "Primary navigation" %}
+  {% assign expand_label = "Open navigation menu" %}
+{% endif %}
+
+<header class="masthead" aria-label="{{ nav_aria_label }}">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <!--
-        导航名称和顺序统一从 _data/navigation.yml 读取。
+        导航名称和顺序统一从 _data/navigation.yml 的对应语言列表读取。
         移动端使用完整页面目录，避免多级折叠菜单遮挡正文。
       -->
       <div class="mobile-nav-shell">
@@ -13,25 +29,25 @@
           aria-expanded="false"
           aria-controls="mobile-nav-drawer"
         >
-          <span class="mobile-nav-toggle-label">页面目录</span>
-          <span class="mobile-nav-current">主页</span>
+          <span class="mobile-nav-toggle-label">{{ directory_label }}</span>
+          <span class="mobile-nav-current">{{ home_label }}</span>
           <span class="mobile-nav-chevron" aria-hidden="true"></span>
         </button>
         <ul id="mobile-nav-drawer" class="mobile-nav-drawer" hidden>
-          <li><a href="{{ '/#home' | relative_url }}" target="_self">主页</a></li>
-          {% for link in site.data.navigation.main %}
+          <li><a href="{{ home_url | relative_url }}" target="_self">{{ home_label }}</a></li>
+          {% for link in nav_links %}
             <li><a href="{{ link.url | relative_url }}" target="_self">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
 
-      <nav id="site-nav" class="greedy-nav" aria-label="页面板块">
-        <button type="button" aria-label="展开导航菜单"><div class="navicon"></div></button>
+      <nav id="site-nav" class="greedy-nav" aria-label="{{ nav_aria_label }}">
+        <button type="button" aria-label="{{ expand_label }}"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-            <a href="{{ '/#home' | relative_url }}" target="_self">主页</a>
+            <a href="{{ home_url | relative_url }}" target="_self">{{ home_label }}</a>
           </li>
-          {% for link in site.data.navigation.main %}
+          {% for link in nav_links %}
             <li class="masthead__menu-item">
               <a href="{{ link.url | relative_url }}" target="_self">{{ link.title }}</a>
             </li>

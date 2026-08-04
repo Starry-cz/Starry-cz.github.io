@@ -4,7 +4,7 @@
   /*
    * 主页交互脚本（只负责行为，不保存主页文字）：
    * - 导航名称和顺序：修改 _data/navigation.yml。
-   * - 正文板块：修改 _pages/about.md。
+   * - 英文正文：修改 _pages/about-en.md；中文正文：修改 _pages/about.md。
    * - 颜色和动画时长：修改 assets/css/custom.scss。
    * 初学者只更新内容时，无需修改本文件。
    */
@@ -24,6 +24,9 @@
   const mobileNavDrawer = document.querySelector("#mobile-nav-drawer");
   const mobileNavCurrent = document.querySelector(".mobile-nav-current");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const isChinesePage = document.documentElement.lang.toLowerCase().startsWith("zh");
+  const openDirectoryLabel = isChinesePage ? "打开页面目录" : "Open section directory";
+  const closeDirectoryLabel = isChinesePage ? "关闭页面目录" : "Close section directory";
 
   // 将当前板块对应的导航链接标为激活，并同步移动端按钮中的板块名称。
   const setActiveSection = (activeId) => {
@@ -83,7 +86,7 @@
   const closeMobileNav = () => {
     if (!mobileNavToggle || !mobileNavDrawer) return;
     mobileNavToggle.setAttribute("aria-expanded", "false");
-    mobileNavToggle.setAttribute("aria-label", "打开页面目录");
+    mobileNavToggle.setAttribute("aria-label", openDirectoryLabel);
     mobileNavDrawer.hidden = true;
   };
 
@@ -92,7 +95,7 @@
     mobileNavToggle.addEventListener("click", () => {
       const willOpen = mobileNavToggle.getAttribute("aria-expanded") !== "true";
       mobileNavToggle.setAttribute("aria-expanded", String(willOpen));
-      mobileNavToggle.setAttribute("aria-label", willOpen ? "关闭页面目录" : "打开页面目录");
+      mobileNavToggle.setAttribute("aria-label", willOpen ? closeDirectoryLabel : openDirectoryLabel);
       mobileNavDrawer.hidden = !willOpen;
     });
 

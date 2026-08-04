@@ -7,13 +7,22 @@
 {% else %}
   {% assign author = site.author %}
 {% endif %}
+{% if page.lang == "zh-CN" %}
+  {% assign profile_name = author.name %}
+  {% assign profile_links_label = "个人与学术链接" %}
+  {% assign education_label = "教育院校" %}
+{% else %}
+  {% assign profile_name = author.name_en | default: author.name %}
+  {% assign profile_links_label = "Personal and academic links" %}
+  {% assign education_label = "Education" %}
+{% endif %}
 
 <div itemscope itemtype="https://schema.org/Person" class="profile_box">
   <div class="author__avatar">
     <img
       src="{{ author.avatar | relative_url }}"
       class="author__avatar"
-      alt="{{ author.name }}"
+      alt="{{ profile_name }}"
       width="1086"
       height="1136"
       decoding="async"
@@ -22,12 +31,12 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
+    <h3 class="author__name" itemprop="name">{{ profile_name }}</h3>
   </div>
 
   <!-- 学术账号尚未创建时，链接在 _config.yml 中统一指向 GitHub 占位页。 -->
   <div class="author__urls-wrapper">
-    <ul class="author__urls social-icons" aria-label="个人与学术链接">
+    <ul class="author__urls social-icons" aria-label="{{ profile_links_label }}">
       <li>
         <a href="{{ author.googlescholar }}" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i>
@@ -56,7 +65,11 @@
   </div>
 
   <!-- 院校信息当前直接写在模板中；修改学校名称时要同时更新 href 官网地址。 -->
-  <div class="author__education" aria-label="教育院校">
-    <p>本科：<a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">广东技术师范大学</a></p>
+  <div class="author__education" aria-label="{{ education_label }}">
+    {% if page.lang == "zh-CN" %}
+      <p>本科：<a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">广东技术师范大学</a></p>
+    {% else %}
+      <p>Undergraduate: <a href="https://www.gpnu.edu.cn/" target="_blank" rel="noopener noreferrer">Guangdong Polytechnic Normal University</a></p>
+    {% endif %}
   </div>
 </div>

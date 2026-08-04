@@ -166,6 +166,40 @@ button:focus-visible {
   transition: color 180ms ease;
 }
 
+/* 英文导航优先使用拉丁字符表现更自然的系统 UI 字体。 */
+html[lang="en"] .masthead,
+html[lang="en"] .greedy-nav a,
+html[lang="en"] .mobile-nav-toggle,
+html[lang="en"] .mobile-nav-drawer a {
+  font-family: "Segoe UI Variable", "Segoe UI", Inter, system-ui, sans-serif;
+}
+
+/* 语言切换沿用参考主页的正文级链接形式，不额外引入按钮或卡片。 */
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  align-items: center;
+  margin-top: 0.65rem;
+  font-size: 0.98em;
+}
+
+.language-switch a,
+.language-switch strong {
+  white-space: nowrap;
+}
+
+.language-switch strong {
+  color: #4d5967;
+  font-weight: 700;
+}
+
+@media (max-width: 47.9375em) {
+  .language-switch {
+    justify-content: flex-start;
+  }
+}
+
 .greedy-nav .visible-links a::before {
   height: 3px;
   border-radius: 999px;

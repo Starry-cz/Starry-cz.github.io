@@ -8,7 +8,7 @@
 
 # 站点基础信息：用于浏览器标题、搜索结果和社交平台链接预览。
 title: "Zifan Cheng's Homepage"
-description: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
+description: "Multimodal Learning · Affective Computing · AI Agents · Artificial Intelligence in Education"
 # url 填写正式域名且末尾不加斜杠；用户主页的 baseurl 保持为空。
 url: "https://starry-cz.github.io"
 baseurl: ""
@@ -26,6 +26,7 @@ baidu_site_verification:
 # 个人信息：头像下方的账号链接由 _includes/author-profile.html 读取这些字段。
 author:
   name: "程子凡"
+  name_en: "Zifan Cheng"
   avatar: "images/cheng-zifan-graduation.webp"
   bio: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
   location: "广东，中国"

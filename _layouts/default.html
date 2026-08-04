@@ -3,14 +3,16 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="zh-CN" class="no-js">
+<html lang="{{ page.lang | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
   <body>
-    <a class="skip-link" href="#main">跳过导航，直接进入正文</a>
+    <a class="skip-link" href="#main">
+      {% if page.lang == "zh-CN" %}跳过导航，直接进入正文{% else %}Skip navigation and go to content{% endif %}
+    </a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 

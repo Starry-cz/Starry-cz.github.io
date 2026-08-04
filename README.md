@@ -1,6 +1,6 @@
 # 程子凡的个人学术主页
 
-在线访问：[https://starry-cz.github.io/](https://starry-cz.github.io/)
+在线访问：英文版 [https://starry-cz.github.io/](https://starry-cz.github.io/) ｜ 中文版 [https://starry-cz.github.io/zh/](https://starry-cz.github.io/zh/)
 
 本项目基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) 定制，使用 Jekyll 生成静态网页，并由 GitHub Actions 自动发布到 GitHub Pages。
 
@@ -17,7 +17,8 @@
 
 | 想修改什么 | 修改哪个文件 | 注意事项 |
 | --- | --- | --- |
-| 主页各板块的文字、项目和获奖信息 | [`_pages/about.md`](_pages/about.md) | 最常修改的文件 |
+| 英文主页各板块的文字、项目和获奖信息 | [`_pages/about-en.md`](_pages/about-en.md) | 根地址 `/`，默认展示 |
+| 中文主页各板块的文字、项目和获奖信息 | [`_pages/about.md`](_pages/about.md) | 中文地址 `/zh/` |
 | 姓名、邮箱、头像路径和站点地址 | [`_config.yml`](_config.yml) | YAML 缩进不能随意改变 |
 | 顶部导航的名称、顺序和链接 | [`_data/navigation.yml`](_data/navigation.yml) | 导航链接要与正文板块的 `id` 对应 |
 | 头像下方的账号和院校信息 | [`_includes/author-profile.html`](_includes/author-profile.html) | 链接需保留完整的 `https://` |
@@ -32,7 +33,7 @@
 
 适合只更新一两段文字、不需要本地预览的情况。
 
-1. 打开仓库中的 `_pages/about.md`。
+1. 修改英文内容时打开 `_pages/about-en.md`；修改中文内容时打开 `_pages/about.md`。
 2. 点击右上角的铅笔图标进入编辑界面。
 3. 修改文字后，点击 **Commit changes**。
 4. 提交到 `main` 分支。
@@ -96,7 +97,7 @@ git push origin main
 
 ## 五、如何修改主页内容
 
-主页内容集中在 `_pages/about.md`。每个板块大致采用下面的结构：
+英文内容位于 `_pages/about-en.md`，中文内容位于 `_pages/about.md`。两个文件的板块结构保持一致，大致如下：
 
 ```html
 <section id="education" data-nav-section markdown="1">
@@ -124,8 +125,8 @@ git push origin main
 
 添加新板块时，需要同时完成两步：
 
-1. 在 `_pages/about.md` 添加新的 `<section id="唯一名称" ...>`。
-2. 在 `_data/navigation.yml` 添加对应的 `url: "/#唯一名称"`。
+1. 分别在 `_pages/about-en.md` 和 `_pages/about.md` 添加新的 `<section id="唯一名称" ...>`。
+2. 在 `_data/navigation.yml` 的 `en` 和 `zh` 列表中分别添加对应链接；英文使用 `/#唯一名称`，中文使用 `/zh/#唯一名称`。
 
 ## 六、如何修改头像、图片和链接
 
@@ -148,7 +149,7 @@ author:
 
 ### 替换项目图片
 
-把图片放入 `images/`，再在 `_pages/about.md` 中引用：
+把图片放入 `images/`，再在对应语言的主页文件中引用：
 
 ```markdown
 ![图片说明](/images/图片文件名.webp)
@@ -212,7 +213,7 @@ author:
 
 ### 导航点击后位置不对
 
-检查 `_data/navigation.yml` 中 `/#` 后面的名称，是否与 `_pages/about.md` 中对应 section 的 `id` 完全相同。
+检查 `_data/navigation.yml` 中 `#` 后面的名称，是否与对应语言页面中 section 的 `id` 完全相同。
 
 ### 可以在公开仓库中放隐私信息吗
 
@@ -224,7 +225,8 @@ author:
 .
 ├─ _config.yml                 # 站点和个人信息配置
 ├─ _data/navigation.yml        # 顶部导航配置
-├─ _pages/about.md             # 主页全部正文
+├─ _pages/about-en.md          # 英文主页正文（根地址，默认展示）
+├─ _pages/about.md             # 中文主页正文（/zh/）
 ├─ _includes/                  # 可复用的页面组件
 ├─ _layouts/                   # 页面整体结构
 ├─ assets/css/custom.scss      # 自定义视觉样式
