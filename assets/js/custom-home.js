@@ -60,7 +60,7 @@
 
   let activeSectionFrame = 0;
 
-  // 根据滚动位置判断正在阅读哪个板块；到达页面底部时直接激活最后一项。
+  // 根据滚动位置判断正在阅读哪个板块；页面底部结合当前可见锚点确定高亮。
   const updateActiveSection = () => {
     const documentHeight = document.documentElement.scrollHeight;
     const reachedPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
@@ -76,7 +76,19 @@
     }
 
     if (reachedPageBottom) {
-      activeSection = sections[sections.length - 1];
+      /*
+       * 高视口下“技能”和“实习”可能同时出现在页面底部。
+       * 若当前锚点对应的板块仍在视口中，优先保留用户实际点击的导航项。
+       */
+      const requestedSectionId = decodeURIComponent(window.location.hash.slice(1));
+      const requestedSection = sections.find((section) => section.id === requestedSectionId);
+      const requestedRect = requestedSection?.getBoundingClientRect();
+      const requestedSectionIsVisible =
+        requestedRect && requestedRect.bottom > readingLine && requestedRect.top < window.innerHeight;
+
+      activeSection = requestedSectionIsVisible
+        ? requestedSection
+        : sections[sections.length - 1];
     } else {
       for (const section of sections) {
         if (section.getBoundingClientRect().top > readingLine) break;
@@ -96,6 +108,8 @@
 
   window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
   window.addEventListener("resize", requestActiveSectionUpdate);
+  // 两个尾部板块可能共享同一最大滚动位置，锚点变化时也要立即刷新高亮。
+  window.addEventListener("hashchange", requestActiveSectionUpdate);
   requestActiveSectionUpdate();
 
   // 统一关闭移动端目录，并同步无障碍属性与按钮提示文字。
