@@ -22,7 +22,7 @@ redirect_from:
 
 <section id="about-me" data-nav-section markdown="1">
 
-## 💡 About Me {#about-me-heading .section-heading}
+<h2 id="about-me-heading" class="section-heading">💡 About Me</h2>
 
 I am **Zifan Cheng**, a graduate of the Data Science and Big Data Technology program at Guangdong Polytechnic Normal University. I ranked **1st out of 151 students** in comprehensive assessment for four consecutive years. During my undergraduate studies, my research centered on artificial intelligence, with a particular focus on multimodal perception and fusion, emotion understanding and reasoning, and the design and application of large language model agents.
 
@@ -38,7 +38,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="education" data-nav-section markdown="1">
 
-## 🎓 Education {#education-heading .section-heading}
+<h2 id="education-heading" class="section-heading">🎓 Education</h2>
 
 - **2022.09 - 2026.06, Guangdong Polytechnic Normal University, School of Low-Altitude Technology and Engineering, B.Eng.** Average major-course score: 88/100; comprehensive assessment rank: 1/151. Recipient of the Outstanding Undergraduate Thesis award. Major honors include Outstanding Student and Outstanding Communist Youth League Cadre.
 
@@ -50,7 +50,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="research-interests" data-nav-section markdown="1">
 
-## 🔬 Research Interests {#research-interests-heading .section-heading}
+<h2 id="research-interests-heading" class="section-heading">🔬 Research Interests</h2>
 
 - **Multimodal Learning:** Unified representation, cross-modal alignment, and dynamic fusion of text, images, speech, and video, with an emphasis on long-context reasoning and reliable adaptive fusion under missing modalities, conflicting information, and distribution shifts.
 - **Affective Computing:** Fine-grained cross-modal emotion understanding, affective reasoning, personalized empathetic generation, and interpretable evaluation for multimodal large models and natural human–computer interaction.
@@ -61,7 +61,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="news" data-nav-section markdown="1">
 
-## 🔥 News {#news-heading .section-heading}
+<h2 id="news-heading" class="section-heading">🔥 News</h2>
 
 - *2026.08:* 🎉 Our latest platform, “[Xuechuang Cloud](http://120.24.37.210/home),” is now online.
 - *2026.07:* 🚀 I released **[Academic Data Visualization Skills](https://github.com/Starry-cz/academic-data-visualization)**, a workflow for producing publication- and presentation-ready data visualizations from research questions. <span class="news-repo-meta"><a class="news-repo-link" href="https://github.com/Starry-cz/academic-data-visualization" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Academic Data Visualization Skills</a><a class="news-repo-stars" href="https://github.com/Starry-cz/academic-data-visualization/stargazers" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/Starry-cz/academic-data-visualization?style=social" alt="GitHub stars for Academic Data Visualization Skills"></a></span>
@@ -76,7 +76,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="research-topics" data-nav-section markdown="1">
 
-## 📚 Research Projects {#research-projects-heading .section-heading}
+<h2 id="research-projects-heading" class="section-heading">📚 Research Projects</h2>
 
 - **2023.05 - 2024.05｜Intelligent Traffic Height-Restriction Warning System Based on Binocular Vision Perception.** Key-Area Undergraduate Innovation and Entrepreneurship Training Program; Principal Investigator.
 - **2024.05 - 2025.05｜Eco-Friendly Corn Pest Management and Intelligent Water–Fertilizer Management Platform Based on Multi-Source Data Fusion.** National Undergraduate Innovation and Entrepreneurship Training Program; Participant.
@@ -88,7 +88,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="academic-achievements" data-nav-section markdown="1">
 
-## 📝 Academic Work {#academic-work-heading .section-heading}
+<h2 id="academic-work-heading" class="section-heading">📝 Academic Work</h2>
 
 <div class="paper-box">
   <div class="paper-box-image">
@@ -135,9 +135,9 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="intellectual-property" data-nav-section markdown="1">
 
-## 🛡️ Intellectual Property {#intellectual-property-heading .section-heading}
+<h2 id="intellectual-property-heading" class="section-heading">🛡️ Intellectual Property</h2>
 
-### <a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="{{ '/images/patent-logo.jpg' | relative_url }}" alt="China National Intellectual Property Administration logo"></span></a>Patents {#patents-heading .ip-subheading}
+<h3 id="patents-heading" class="ip-subheading"><a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="{{ '/images/patent-logo.jpg' | relative_url }}" alt="China National Intellectual Property Administration logo"></span></a>Patents</h3>
 
 - **CN121073716A**, Interactive Real-Time Cyclic-Feedback Programming Teaching Method and System Based on a Large Language Model; published; first inventor.
 - **CN121352715A**, Online Interactive Programming Education System and Method Based on a Microservices Architecture; published; second inventor.
@@ -148,7 +148,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 - **2024230994941**, Vehicle Height-Restriction Safety Alert Device; application accepted; second inventor.
 - **2024115974965**, High-Efficiency Nanocarbon Material, Its Preparation Method, and Application in Lithium–Sulfur Batteries; application accepted; second inventor.
 
-### <a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="Copyright Protection Center of China logo"></span></a>Software Copyrights {#software-copyrights-heading .ip-subheading}
+<h3 id="software-copyrights-heading" class="ip-subheading"><a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="Copyright Protection Center of China logo"></span></a>Software Copyrights</h3>
 
 - **2026SR0181516**, EduMind Lite Agent-Based Education Platform V1.0; registered; first author.
 - **2025SR1553286**, Interactive Programming Course Learning Platform V1.0; registered; first author.
@@ -166,7 +166,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="awards" data-nav-section markdown="1">
 
-## 🏆 Awards {#awards-heading .section-heading}
+<h2 id="awards-heading" class="section-heading">🏆 Awards</h2>
 
 - **Second Prize**, May Day Mathematical Modeling Competition.
 - **First Prize**, Huashu Cup National Undergraduate Mathematical Modeling Competition.
@@ -187,7 +187,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="skills-contact" data-nav-section markdown="1">
 
-## 🛠️ Skills and Contact {#skills-contact-heading .section-heading}
+<h2 id="skills-contact-heading" class="section-heading">🛠️ Skills and Contact</h2>
 
 - **Artificial Intelligence and Modeling:** Python, PyTorch, and Hugging Face Transformers; familiarity with TensorFlow and PaddlePaddle; experience in model development, training and optimization, transfer learning, parameter-efficient fine-tuning, and modular research code.
 - **Multimodal Learning:** OpenCV, Pillow, Librosa, Torchaudio, and FFmpeg; text, image, speech, and video processing; cross-modal alignment, representation learning, dynamic fusion, and missing-modality modeling.
@@ -211,7 +211,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <section id="internships-work" data-nav-section markdown="1">
 
-## 💼 Internships and Experience {#internships-experience-heading .section-heading}
+<h2 id="internships-experience-heading" class="section-heading">💼 Internships and Experience</h2>
 
 - **2024.06 - 2024.10｜Guangzhou Weiyue Communication Equipment Co., Ltd.**, Data Developer.
 - **2025.03 - 2025.07｜iFLYTEK Co., Ltd.**, AI Product Manager.

@@ -19,7 +19,7 @@ author_profile: true
 
 <section id="about-me" data-nav-section markdown="1">
 
-## 💡 关于我 {#about-me-heading .section-heading}
+<h2 id="about-me-heading" class="section-heading">💡 关于我</h2>
 
 我是**程子凡**，本科毕业于广东技术师范大学数据科学与大数据技术专业，连续四年综合测评排名专业第一（**1/151**）。本科阶段主要围绕人工智能开展研究，重点关注多模态信息感知与融合、情感理解与推理，以及大模型智能体的设计与应用。
 
@@ -35,7 +35,7 @@ author_profile: true
 
 <section id="education" data-nav-section markdown="1">
 
-## 🎓 教育背景 {#education-heading .section-heading}
+<h2 id="education-heading" class="section-heading">🎓 教育背景</h2>
 
 - **2022.09 - 2026.06，广东技术师范大学，低空技术与工程学院，工学学士。** 专业均分 88，综合测评排名 1/151；获评优秀本科毕业论文，主要荣誉包括优秀三好学生、优秀共青团干部等。
 
@@ -47,7 +47,7 @@ author_profile: true
 
 <section id="research-interests" data-nav-section markdown="1">
 
-## 🔬 研究方向 {#research-interests-heading .section-heading}
+<h2 id="research-interests-heading" class="section-heading">🔬 研究方向</h2>
 
 - **多模态学习：** 聚焦文本、图像、语音与视频等多源信息的统一表征、跨模态对齐与动态融合，长时序推理与可靠动态融合，提升模型在模态缺失、信息冲突和分布迁移条件下的复杂推理与鲁棒泛化能力。
 - **情感计算：** 面向多模态大模型与自然人机交互，研究跨模态细粒度情绪理解、情感推理、个性化共情生成与可解释评测，构建更自然、可信的情感智能系统。
@@ -58,7 +58,7 @@ author_profile: true
 
 <section id="news" data-nav-section markdown="1">
 
-## 🔥 新闻动态 {#news-heading .section-heading}
+<h2 id="news-heading" class="section-heading">🔥 新闻动态</h2>
 
 - *2026.08：* 🎉 团队最新平台“[学创云](http://120.24.37.210/home)”上线。
 - *2026.07：* 🚀 我发布 **[Academic Data Visualization Skills](https://github.com/Starry-cz/academic-data-visualization)**：从研究问题到顶刊与发布场景级数据可视化图。 <span class="news-repo-meta"><a class="news-repo-link" href="https://github.com/Starry-cz/academic-data-visualization" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Academic Data Visualization Skills</a><a class="news-repo-stars" href="https://github.com/Starry-cz/academic-data-visualization/stargazers" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/Starry-cz/academic-data-visualization?style=social" alt="Academic Data Visualization Skills 的 GitHub Stars"></a></span>
@@ -73,7 +73,7 @@ author_profile: true
 
 <section id="research-topics" data-nav-section markdown="1">
 
-## 📚 研究课题 {#research-projects-heading .section-heading}
+<h2 id="research-projects-heading" class="section-heading">📚 研究课题</h2>
 
 - **2023.05 - 2024.05｜基于双目视觉感知的智能交通限高预警系统，** 重点领域大学生创新创业计划项目，主持。
 - **2024.05 - 2025.05｜基于多源数据融合的玉米生态友好型病虫害防治和水肥智能管理平台，** 国家级大学生创新创业计划项目，参与。
@@ -85,7 +85,7 @@ author_profile: true
 
 <section id="academic-achievements" data-nav-section markdown="1">
 
-## 📝 学术成果 {#academic-work-heading .section-heading}
+<h2 id="academic-work-heading" class="section-heading">📝 学术成果</h2>
 
 <div class="paper-box">
   <div class="paper-box-image">
@@ -132,9 +132,9 @@ author_profile: true
 
 <section id="intellectual-property" data-nav-section markdown="1">
 
-## 🛡️ 专利版权 {#intellectual-property-heading .section-heading}
+<h2 id="intellectual-property-heading" class="section-heading">🛡️ 专利版权</h2>
 
-### <a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="{{ '/images/patent-logo.jpg' | relative_url }}" alt="国家知识产权局局徽"></span></a>专利 {#patents-heading .ip-subheading}
+<h3 id="patents-heading" class="ip-subheading"><a class="official-logo-link" href="https://pss-system.cponline.cnipa.gov.cn/Disclaimer" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-patent"><img src="{{ '/images/patent-logo.jpg' | relative_url }}" alt="国家知识产权局局徽"></span></a>专利</h3>
 
 - **CN121073716A**，一种基于大语言模型的交互式实时循环反馈的编程教学方法及系统，已公开，第一作者。
 - **CN121352715A**，一种基于微服务架构的在线交互式编程教育系统及方法，已公开，第二作者。
@@ -145,7 +145,7 @@ author_profile: true
 - **2024230994941**，一种车辆限高安全提示装置，已受理，第二作者。
 - **2024115974965**，一种高效纳米碳材料、制备方法及其在锂硫电池中的应用，已受理，第二作者。
 
-### <a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="中国版权保护中心标识"></span></a>软件著作权 {#software-copyrights-heading .ip-subheading}
+<h3 id="software-copyrights-heading" class="ip-subheading"><a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="中国版权保护中心标识"></span></a>软件著作权</h3>
 
 - **2026SR0181516**，EduMind Lite 智能体教育平台 V1.0，已授权，第一作者。
 - **2025SR1553286**，交互式编程课程学习平台 V1.0，已授权，第一作者。
@@ -163,7 +163,7 @@ author_profile: true
 
 <section id="awards" data-nav-section markdown="1">
 
-## 🏆 竞赛获奖 {#awards-heading .section-heading}
+<h2 id="awards-heading" class="section-heading">🏆 竞赛获奖</h2>
 
 - 五一数学建模竞赛**二等奖**。
 - 华数杯大学生数学建模竞赛**一等奖**。
@@ -184,7 +184,7 @@ author_profile: true
 
 <section id="skills-contact" data-nav-section markdown="1">
 
-## 🛠️ 技能与联系 {#skills-contact-heading .section-heading}
+<h2 id="skills-contact-heading" class="section-heading">🛠️ 技能与联系</h2>
 
 - **人工智能与建模：** Python、PyTorch、Hugging Face Transformers，了解 TensorFlow、PaddlePaddle；具备模型构建、训练调优、迁移学习、参数高效微调与科研代码模块化能力。
 - **多模态学习：** OpenCV、Pillow、Librosa、Torchaudio、FFmpeg；掌握文本、图像、语音与视频数据处理，以及跨模态对齐、表征学习、动态融合与缺失模态建模。
@@ -208,7 +208,7 @@ author_profile: true
 
 <section id="internships-work" data-nav-section markdown="1">
 
-## 💼 实习与工作 {#internships-work-heading .section-heading}
+<h2 id="internships-work-heading" class="section-heading">💼 实习与工作</h2>
 
 - **2024.06 - 2024.10｜广州市伟粤通讯设备有限公司**，数据开发。
 - **2025.03 - 2025.07｜科大讯飞股份有限公司**，AI 产品经理。
