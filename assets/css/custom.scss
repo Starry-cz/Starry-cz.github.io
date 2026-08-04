@@ -124,7 +124,10 @@ button:focus-visible {
   }
 }
 
-/* 导航使用深海军蓝、钢蓝与冰蓝，尺寸和栏目间距维持原样。 */
+/*
+ * 导航使用深海军蓝、钢蓝与冰蓝，尺寸和栏目间距维持原样。
+ * 字体优先调用各系统自带的现代中文 UI 字体，不依赖外部字体服务，避免加载变慢或字体闪烁。
+ */
 .masthead {
   border-bottom-color: rgba(173, 202, 237, 0.22);
   background: linear-gradient(
@@ -136,12 +139,30 @@ button:focus-visible {
   box-shadow: 0 8px 26px rgba(4, 18, 40, 0.16);
 }
 
+.masthead,
+.greedy-nav a,
+.mobile-nav-toggle,
+.mobile-nav-drawer a {
+  font-family:
+    "Microsoft YaHei UI",
+    "PingFang SC",
+    "Noto Sans CJK SC",
+    "Source Han Sans SC",
+    system-ui,
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 .greedy-nav {
   background: transparent;
 }
 
 .greedy-nav a {
   color: rgba(211, 225, 243, 0.82);
+  font-weight: 600;
+  letter-spacing: 0.02em;
   transition: color 180ms ease;
 }
 
@@ -228,12 +249,14 @@ button:focus-visible {
     border-radius: 6px;
     background: rgba(116, 159, 210, 0.08);
     color: #f2f7ff;
-    font: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     cursor: pointer;
   }
 
   .mobile-nav-toggle-label {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .mobile-nav-current {
@@ -285,6 +308,8 @@ button:focus-visible {
     padding: 0.7rem 0.85rem;
     border-radius: 5px;
     color: rgba(211, 225, 243, 0.86);
+    font-weight: 500;
+    letter-spacing: 0.02em;
     text-decoration: none;
   }
 
