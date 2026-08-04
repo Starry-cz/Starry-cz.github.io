@@ -633,14 +633,16 @@ html[lang="en"] .mobile-nav-drawer a {
 
 /* 第一条成果靠近板块标题，避免封面与标题之间出现过量留白。 */
 #academic-achievements > .paper-box:first-of-type {
-  padding-top: 0.65em;
+  /* 第一条成果与板块标题采用和其他板块一致的紧凑间距。 */
+  padding-top: 0.2em;
 }
 
 .project-cover {
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 138px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -674,15 +676,14 @@ html[lang="en"] .mobile-nav-drawer a {
 @media (min-width: 48em) {
   /* 桌面端适度放大成果封面，同时为右侧文字保留充足宽度。 */
   .paper-box .paper-box-image {
-    max-width: 43%;
+    /* 桌面端略微放大封面，并保持接近论文配图的 16:9 比例。 */
+    flex: 0 0 46%;
+    max-width: 46%;
   }
 
   .paper-box .paper-box-text {
-    max-width: 57%;
-  }
-
-  .project-cover {
-    min-height: 152px;
+    flex: 0 0 54%;
+    max-width: 54%;
   }
 }
 
