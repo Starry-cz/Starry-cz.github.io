@@ -29,7 +29,8 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ site.title }}">
 
@@ -38,8 +39,18 @@
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
   <meta property="og:description" content="{{ seo_description }}">
+  <meta name="description" content="{{ seo_description }}">
+{% endif %}
+
+{% assign seo_image = page.image | default: site.og_image %}
+{% if seo_image %}
+  {% assign seo_image_url = seo_image | absolute_url %}
+  <meta property="og:image" content="{{ seo_image_url }}">
+  <meta property="og:image:alt" content="{{ site.author.name }}的个人主页分享预览图">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ seo_image_url }}">
 {% endif %}
 
 {% if site.twitter.username %}

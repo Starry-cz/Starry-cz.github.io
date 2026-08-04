@@ -48,6 +48,40 @@ body {
     linear-gradient(180deg, #f4f7fb 0%, #fbfcfe 35%, #f2f6fa 100%);
 }
 
+/* 键盘用户可直接跳过长导航；鼠标访问时不占用页面空间。 */
+.skip-link {
+  position: fixed;
+  z-index: 2000;
+  top: 0.65rem;
+  left: 0.75rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 6px;
+  background: #f7fbff;
+  box-shadow: 0 6px 20px rgba(4, 18, 40, 0.22);
+  color: #123e6d;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  outline: 3px solid #79aee9;
+  outline-offset: 2px;
+  transform: translateY(0);
+}
+
+/* 为键盘焦点提供统一的高对比反馈，不改变鼠标点击后的外观。 */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #79aee9;
+  outline-offset: 3px;
+}
+
+#main:focus {
+  outline: none;
+}
+
 /* 主体只使用边缘与阴影产生抬升感，内部保持页面原始背景配色。 */
 #main {
   position: relative;
@@ -425,7 +459,7 @@ body {
 }
 
 .badge-teal {
-  background-color: #3d8790;
+  background-color: #367982;
 }
 
 .badge-slate {

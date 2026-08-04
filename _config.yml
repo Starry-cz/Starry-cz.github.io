@@ -1,10 +1,11 @@
 # 站点基础信息
 title: "Zifan Cheng's Homepage"
 description: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
-url: ""
+url: "https://starry-cz.github.io"
 baseurl: ""
-# 发布前替换为“GitHub用户名/GitHub用户名.github.io”。
-repository: "YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME.github.io"
+repository: "Starry-cz/Starry-cz.github.io"
+# 社交平台分享时使用原始毕业照，兼容常见的链接预览抓取器。
+og_image: "/images/cheng-zifan-graduation.jpg"
 google_scholar_stats_use_cdn: false
 
 # 统计与站长验证（获得对应 ID 后再填写）
@@ -16,7 +17,7 @@ baidu_site_verification:
 # 个人信息
 author:
   name: "程子凡"
-  avatar: "images/cheng-zifan-graduation.jpg"
+  avatar: "images/cheng-zifan-graduation.webp"
   bio: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
   location: "广东，中国"
   employer: "广东技术师范大学"

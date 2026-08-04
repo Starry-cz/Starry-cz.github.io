@@ -10,10 +10,11 @@ layout: compress
   </head>
 
   <body>
+    <a class="skip-link" href="#main">跳过导航，直接进入正文</a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <div id="main" role="main">
+    <div id="main" role="main" tabindex="-1">
       {% include sidebar.html %}
 
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">

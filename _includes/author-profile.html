@@ -6,7 +6,15 @@
 
 <div itemscope itemtype="https://schema.org/Person" class="profile_box">
   <div class="author__avatar">
-    <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}">
+    <img
+      src="{{ author.avatar | relative_url }}"
+      class="author__avatar"
+      alt="{{ author.name }}"
+      width="1086"
+      height="1136"
+      decoding="async"
+      fetchpriority="high"
+    >
   </div>
 
   <div class="author__content">

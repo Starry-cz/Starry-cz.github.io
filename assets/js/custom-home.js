@@ -71,6 +71,7 @@
   const closeMobileNav = () => {
     if (!mobileNavToggle || !mobileNavDrawer) return;
     mobileNavToggle.setAttribute("aria-expanded", "false");
+    mobileNavToggle.setAttribute("aria-label", "打开页面目录");
     mobileNavDrawer.hidden = true;
   };
 
@@ -78,6 +79,7 @@
     mobileNavToggle.addEventListener("click", () => {
       const willOpen = mobileNavToggle.getAttribute("aria-expanded") !== "true";
       mobileNavToggle.setAttribute("aria-expanded", String(willOpen));
+      mobileNavToggle.setAttribute("aria-label", willOpen ? "关闭页面目录" : "打开页面目录");
       mobileNavDrawer.hidden = !willOpen;
     });
 
@@ -91,7 +93,7 @@
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key !== "Escape") return;
+      if (event.key !== "Escape" || mobileNavToggle.getAttribute("aria-expanded") !== "true") return;
       closeMobileNav();
       mobileNavToggle.focus();
     });
