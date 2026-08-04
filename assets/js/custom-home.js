@@ -58,15 +58,36 @@
     if (mobileNavCurrent && activeTitle) mobileNavCurrent.textContent = activeTitle;
   };
 
+  const initialNavigationId = decodeURIComponent(window.location.hash.slice(1));
+  let selectedNavigationId = navLinks.some((link) => {
+    return new URL(link.href, window.location.href).hash.slice(1) === initialNavigationId;
+  })
+    ? initialNavigationId
+    : "";
   let activeSectionFrame = 0;
 
-  // 根据滚动位置判断正在阅读哪个板块；页面底部结合当前可见锚点确定高亮。
+  // 根据滚动位置判断正在阅读哪个板块；靠近底部时逐步下移判定线，让最后两个板块都能被识别。
   const updateActiveSection = () => {
     const documentHeight = document.documentElement.scrollHeight;
-    const reachedPageBottom = window.scrollY + window.innerHeight >= documentHeight - 2;
     const mastheadBottom = document.querySelector(".masthead").getBoundingClientRect().bottom;
-    const readingLine = mastheadBottom + 24;
+    const standardReadingLine = mastheadBottom + 24;
+    const distanceToBottom = Math.max(
+      0,
+      documentHeight - (window.scrollY + window.innerHeight)
+    );
+    const bottomTransitionRange = Math.min(window.innerHeight * 0.3, 320);
+    const bottomProgress = Math.max(0, 1 - distanceToBottom / bottomTransitionRange);
+    const bottomReadingLine = Math.max(standardReadingLine, window.innerHeight - 24);
+    const readingLine =
+      standardReadingLine + (bottomReadingLine - standardReadingLine) * bottomProgress;
     let activeSection = sections[0];
+
+    // 点击导航后保持用户选择；发生新的手动滚动时再恢复位置判定。
+    if (selectedNavigationId) {
+      setActiveSection(selectedNavigationId);
+      activeSectionFrame = 0;
+      return;
+    }
 
     // 页面最上方对应“主页”；离开顶部后再根据正文板块更新高亮。
     if (window.scrollY <= 24) {
@@ -75,25 +96,9 @@
       return;
     }
 
-    if (reachedPageBottom) {
-      /*
-       * 高视口下“技能”和“实习”可能同时出现在页面底部。
-       * 若当前锚点对应的板块仍在视口中，优先保留用户实际点击的导航项。
-       */
-      const requestedSectionId = decodeURIComponent(window.location.hash.slice(1));
-      const requestedSection = sections.find((section) => section.id === requestedSectionId);
-      const requestedRect = requestedSection?.getBoundingClientRect();
-      const requestedSectionIsVisible =
-        requestedRect && requestedRect.bottom > readingLine && requestedRect.top < window.innerHeight;
-
-      activeSection = requestedSectionIsVisible
-        ? requestedSection
-        : sections[sections.length - 1];
-    } else {
-      for (const section of sections) {
-        if (section.getBoundingClientRect().top > readingLine) break;
-        activeSection = section;
-      }
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top > readingLine) break;
+      activeSection = section;
     }
 
     setActiveSection(activeSection.id);
@@ -106,9 +111,44 @@
     activeSectionFrame = window.requestAnimationFrame(updateActiveSection);
   };
 
-  window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
+  const clearNavigationSelection = () => {
+    if (!selectedNavigationId) return;
+    selectedNavigationId = "";
+    requestActiveSectionUpdate();
+  };
+
+  const handlePageScroll = () => {
+    requestActiveSectionUpdate();
+  };
+
+  const scrollKeys = new Set([
+    "ArrowDown",
+    "ArrowUp",
+    "PageDown",
+    "PageUp",
+    "Home",
+    "End",
+    " ",
+  ]);
+
+  window.addEventListener("scroll", handlePageScroll, { passive: true });
+  window.addEventListener("wheel", clearNavigationSelection, { passive: true });
+  window.addEventListener("touchstart", clearNavigationSelection, { passive: true });
+  window.addEventListener(
+    "pointerdown",
+    (event) => {
+      if (event.target instanceof Element && event.target.closest("#site-nav, .mobile-nav-shell")) {
+        return;
+      }
+      clearNavigationSelection();
+    },
+    { passive: true }
+  );
+  window.addEventListener("keydown", (event) => {
+    if (scrollKeys.has(event.key)) clearNavigationSelection();
+  });
   window.addEventListener("resize", requestActiveSectionUpdate);
-  // 两个尾部板块可能共享同一最大滚动位置，锚点变化时也要立即刷新高亮。
+  // 两个尾部板块可能共享同一滚动位置，锚点变化时也要立即刷新高亮。
   window.addEventListener("hashchange", requestActiveSectionUpdate);
   requestActiveSectionUpdate();
 
@@ -148,6 +188,11 @@
   // 兼容主题原有的折叠菜单：选择板块后自动收起，避免遮挡正文。
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
+      selectedNavigationId = decodeURIComponent(
+        new URL(link.href, window.location.href).hash.slice(1)
+      );
+      setActiveSection(selectedNavigationId);
+
       if (menuButton && hiddenMenu && !hiddenMenu.classList.contains("hidden")) {
         menuButton.click();
       }
