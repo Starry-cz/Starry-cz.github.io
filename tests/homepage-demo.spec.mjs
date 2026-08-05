@@ -17,12 +17,15 @@ const demoPages = [
 
 const demoSectionIds = [
   "about-me",
-  "news",
-  "publications",
-  "awards",
   "education",
-  "talks",
-  "internships",
+  "research-interests",
+  "news",
+  "research-topics",
+  "academic-achievements",
+  "intellectual-property",
+  "awards",
+  "skills-contact",
+  "internships-work",
 ];
 
 for (const demoPage of demoPages) {
@@ -31,7 +34,7 @@ for (const demoPage of demoPages) {
       await page.goto(demoPage.path);
 
       await expect(page.locator("h1")).toHaveCount(1);
-      await expect(page.locator("[data-nav-section] > h2.section-heading")).toHaveCount(7);
+      await expect(page.locator("[data-nav-section] > h2.section-heading")).toHaveCount(10);
       await expect(page.locator(".author__name")).toHaveText(demoPage.profileName);
       await expect(page.locator("body")).not.toContainText(demoPage.formalName);
 
@@ -42,7 +45,7 @@ for (const demoPage of demoPages) {
       const desktopPaths = await page.locator("#site-nav a").evaluateAll((links) => {
         return links.map((link) => new URL(link.href).pathname);
       });
-      expect(desktopPaths).toHaveLength(8);
+      expect(desktopPaths).toHaveLength(11);
       expect(desktopPaths.every((path) => path.startsWith("/demo/"))).toBe(true);
 
       const languagePath = await page.locator(".language-switch a").evaluate((link) => {
@@ -52,10 +55,12 @@ for (const demoPage of demoPages) {
     });
 
     test("Demo 末尾板块可直接访问并正确高亮", async ({ page }) => {
-      await page.goto(`${demoPage.path}#internships`);
+      await page.goto(`${demoPage.path}#internships-work`);
 
-      await expect(page.locator("#internships")).toBeVisible();
-      await expect(page.locator('a[href$="#internships"][aria-current="location"]')).toHaveCount(2);
+      await expect(page.locator("#internships-work")).toBeVisible();
+      await expect(
+        page.locator('a[href$="#internships-work"][aria-current="location"]')
+      ).toHaveCount(2);
     });
 
     test("Demo 移动端目录只包含 Demo 板块", async ({ page, isMobile }) => {
@@ -64,7 +69,7 @@ for (const demoPage of demoPages) {
 
       const toggle = page.locator("#mobile-nav-toggle");
       await toggle.click();
-      await expect(page.locator("#mobile-nav-drawer a")).toHaveCount(8);
+      await expect(page.locator("#mobile-nav-drawer a")).toHaveCount(11);
 
       const mobilePaths = await page.locator("#mobile-nav-drawer a").evaluateAll((links) => {
         return links.map((link) => new URL(link.href).pathname);
