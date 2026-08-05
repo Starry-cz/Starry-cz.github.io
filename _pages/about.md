@@ -60,7 +60,7 @@ author_profile: true
 
 <h2 id="news-heading" class="section-heading">🔥 新闻动态</h2>
 
-- *2026.08：* 🎉 团队最新平台“[学创云](http://120.24.37.210/home)”上线。
+- *2026.08：* 🎉 团队最新平台“[学创云](https://www.xuechuang.yun)”上线。
 - *2026.07：* 🚀 我发布 **[Academic Data Visualization Skills](https://github.com/Starry-cz/academic-data-visualization)**：从研究问题到顶刊与发布场景级数据可视化图。 <span class="news-repo-meta"><a class="news-repo-link" href="https://github.com/Starry-cz/academic-data-visualization" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Academic Data Visualization Skills</a><a class="news-repo-stars" href="https://github.com/Starry-cz/academic-data-visualization/stargazers" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/Starry-cz/academic-data-visualization?style=social" alt="Academic Data Visualization Skills 的 GitHub Stars"></a></span>
 - *2026.06：* 🎓 本科毕业论文获评优秀，获评优秀三好学生，并获授工学学士学位。
 - *2026.05：* 🎉 团队智能编程教育平台“[941Code](http://941code.com/)”更新发布。

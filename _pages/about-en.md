@@ -63,7 +63,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 <h2 id="news-heading" class="section-heading">🔥 News</h2>
 
-- *2026.08:* 🎉 Our latest platform, “[Xuechuang Cloud](http://120.24.37.210/home),” is now online.
+- *2026.08:* 🎉 Our latest platform, “[Xuechuang Cloud](https://www.xuechuang.yun),” is now online.
 - *2026.07:* 🚀 I released **[Academic Data Visualization Skills](https://github.com/Starry-cz/academic-data-visualization)**, a workflow for producing publication- and presentation-ready data visualizations from research questions. <span class="news-repo-meta"><a class="news-repo-link" href="https://github.com/Starry-cz/academic-data-visualization" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Academic Data Visualization Skills</a><a class="news-repo-stars" href="https://github.com/Starry-cz/academic-data-visualization/stargazers" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/Starry-cz/academic-data-visualization?style=social" alt="GitHub stars for Academic Data Visualization Skills"></a></span>
 - *2026.06:* 🎓 My undergraduate thesis was recognized as outstanding; I was named an Outstanding Student and received a Bachelor of Engineering degree.
 - *2026.05:* 🎉 Our intelligent programming education platform, “[941Code](http://941code.com/),” released a major update.
