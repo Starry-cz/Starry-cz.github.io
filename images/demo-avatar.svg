@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Generic academic profile illustration</title>
+  <desc id="description">A neutral illustrated portrait used only by the reproducible homepage demo.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173b62"/>
+      <stop offset="1" stop-color="#8db4d5"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#c7d9ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="48" fill="url(#background)"/>
+  <circle cx="256" cy="207" r="104" fill="#f0c7a6"/>
+  <path d="M149 207c0-91 48-139 111-139 68 0 111 49 111 139-29-29-54-51-91-66-42 32-81 48-131 53z" fill="#172536"/>
+  <path d="M175 191c22-6 43-5 61 3m40 0c19-8 40-9 61-3" fill="none" stroke="#2a3948" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="214" cy="205" r="30" fill="none" stroke="#2a3948" stroke-width="8"/>
+  <circle cx="298" cy="205" r="30" fill="none" stroke="#2a3948" stroke-width="8"/>
+  <path d="M244 205h24" stroke="#2a3948" stroke-width="8"/>
+  <path d="M225 258c20 15 42 15 62 0" fill="none" stroke="#a45d58" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 512c12-128 78-194 174-194s162 66 174 194z" fill="url(#shirt)"/>
+  <path d="M190 327l66 79 66-79 43 34-47 151H194l-47-151z" fill="#244c75"/>
+  <path d="M221 318h70l-35 88z" fill="#ffffff"/>
+  <circle cx="421" cy="91" r="44" fill="#ffffff" opacity=".16"/>
+  <path d="M397 91h48M421 67v48" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+</svg>

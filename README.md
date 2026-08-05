@@ -1,9 +1,11 @@
 # 双语个人学术主页：零基础复现与修改指南
 
-这是程子凡的中英文个人学术主页源码：
+这是czf的中英文个人主页源码：
 
-- 英文版（默认）：[https://starry-cz.github.io/](https://starry-cz.github.io/)
-- 中文版：[https://starry-cz.github.io/zh/](https://starry-cz.github.io/zh/)
+- 英文 Demo：[https://starry-cz.github.io/demo/](https://starry-cz.github.io/demo/)
+- 中文 Demo：[https://starry-cz.github.io/demo/zh/](https://starry-cz.github.io/demo/zh/)
+
+> Demo 使用虚构占位信息，用于展示框架、排版和修改方法；与正式个人主页内容独立。
 
 ![主页示例](docs/screenshot.png)
 

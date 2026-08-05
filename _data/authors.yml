@@ -1,0 +1,9 @@
+# Demo 使用明显的虚构身份，避免读者误以为是真实学者资料。
+demo:
+  name: "陈晓明"
+  name_en: "Alex Chen"
+  avatar: "images/demo-avatar.svg"
+  email: "alex.chen@example.com"
+  github: "https://github.com/"
+  googlescholar: "https://scholar.google.com/"
+  orcid: "https://orcid.org/"

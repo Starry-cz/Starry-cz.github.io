@@ -1,4 +1,18 @@
-{% if page.lang == "zh-CN" %}
+{% if page.demo and page.lang == "zh-CN" %}
+  {% assign nav_links = site.data.navigation.demo_zh %}
+  {% assign home_url = "/demo/zh/#home" %}
+  {% assign home_label = "主页" %}
+  {% assign directory_label = "页面目录" %}
+  {% assign nav_aria_label = "Demo 主导航" %}
+  {% assign expand_label = "展开 Demo 导航菜单" %}
+{% elsif page.demo %}
+  {% assign nav_links = site.data.navigation.demo_en %}
+  {% assign home_url = "/demo/#home" %}
+  {% assign home_label = "Home" %}
+  {% assign directory_label = "Sections" %}
+  {% assign nav_aria_label = "Demo primary navigation" %}
+  {% assign expand_label = "Open Demo navigation menu" %}
+{% elsif page.lang == "zh-CN" %}
   {% assign nav_links = site.data.navigation.zh %}
   {% assign home_url = "/zh/#home" %}
   {% assign home_label = "主页" %}
