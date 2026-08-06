@@ -63,6 +63,7 @@ author_profile: true
 - *2026.08：* 🎉 团队最新平台“[学创云](https://www.xuechuang.yun)”上线。
 - *2026.07：* 🚀 我发布 **[Academic Data Visualization Skills](https://github.com/Starry-cz/academic-data-visualization)**：从研究问题到顶刊与发布场景级数据可视化图。 <span class="news-repo-meta"><a class="news-repo-link" href="https://github.com/Starry-cz/academic-data-visualization" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Academic Data Visualization Skills</a><a class="news-repo-stars" href="https://github.com/Starry-cz/academic-data-visualization/stargazers" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/Starry-cz/academic-data-visualization?style=social" alt="Academic Data Visualization Skills 的 GitHub Stars"></a></span>
 - *2026.06：* 🎓 本科毕业论文获评优秀，获评优秀三好学生，并获授工学学士学位。
+- *2026.05：* 🎉 团队《面向多场景协同的无人机智能调度与 AI 插件治理平台》项目获大创国家级立项。
 - *2026.05：* 🎉 团队智能编程教育平台“[941Code](http://941code.com/)”更新发布。
 - *2025.10：* 🌱 “怦然兴农”项目入选广东青年大学生“百千万工程”突击队行动典型案例。
 - *2025.08：* 🥇 团队工作获省级官媒认可，有幸登上《广东新闻联播》，接受广东电视台报道。
