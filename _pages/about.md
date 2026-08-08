@@ -142,7 +142,7 @@ author_profile: true
 - **2026107369819**，一种基于大模型驱动的多智能体协同自适应教学系统及方法，已受理，第二作者。
 - **2025200594272**，一种公路行驶限高监测装置，已受理，第二作者。
 - **2024230994941**，一种车辆限高安全提示装置，已受理，第二作者。
-- **2024115974965**，一种高效纳米碳材料、制备方法及其在锂硫电池中的应用，已受理，第二作者。
+- **2024115974965**，一种高效纳米碳材料、制备方法及其在锂硫电池中的应用，已受理，第四作者。
 
 <h3 id="software-copyrights-heading" class="ip-subheading"><a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="中国版权保护中心标识"></span></a>软件著作权</h3>
 
@@ -174,7 +174,6 @@ author_profile: true
 - “挑战杯”广东大学生课外学术科技作品竞赛**一等奖**。
 - “创青春”中国青年碳中和创新大赛华南赛区**银奖**。
 - “赢在广州”暨粤港澳大湾区大学生创业大赛**优胜奖**。
-- 大学生新文科实践创新大赛全国**二等奖**。
 - 中国高等教育学会高校教学智能体**优秀应用案例**。
 - 全国高校“人工智能+”计算机教育大会教学案例**特等奖**。
 - 全国中小学人工智能和信息科技教育创新学术论坛**优秀案例**。

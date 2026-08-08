@@ -145,7 +145,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 - **2026107369819**, Large-Model-Driven Multi-Agent Collaborative Adaptive Teaching System and Method; application accepted; second inventor.
 - **2025200594272**, Road Vehicle Height-Restriction Monitoring Device; application accepted; second inventor.
 - **2024230994941**, Vehicle Height-Restriction Safety Alert Device; application accepted; second inventor.
-- **2024115974965**, High-Efficiency Nanocarbon Material, Its Preparation Method, and Application in Lithium–Sulfur Batteries; application accepted; second inventor.
+- **2024115974965**, High-Efficiency Nanocarbon Material, Its Preparation Method, and Application in Lithium–Sulfur Batteries; application accepted; fourth inventor.
 
 <h3 id="software-copyrights-heading" class="ip-subheading"><a class="official-logo-link" href="https://www.ccopyright.com/" target="_blank" rel="noopener noreferrer"><span class="official-logo official-logo-copyright"><img src="{{ '/images/copyright-logo.jpg' | relative_url }}" alt="Copyright Protection Center of China logo"></span></a>Software Copyrights</h3>
 
@@ -177,7 +177,6 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 - **First Prize**, “Challenge Cup” Guangdong College Students’ Extracurricular Academic Science and Technology Works Competition.
 - **Silver Award (South China Division)**, “Create Youth” China Youth Carbon Neutrality Innovation Competition.
 - **Excellence Award**, “Win in Guangzhou” and Guangdong–Hong Kong–Macao Greater Bay Area College Students’ Entrepreneurship Competition.
-- **National Second Prize**, College Students’ New Liberal Arts Practice Innovation Competition.
 - **Outstanding Application Case**, University Teaching Agent Program of the China Association of Higher Education.
 - **Grand Prize for Teaching Case**, National Higher Education “AI+” Computer Education Conference.
 - **Outstanding Case**, National Academic Forum on Innovation in AI and Information Technology Education for Primary and Secondary Schools.
