@@ -44,8 +44,6 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 
 - **Selected coursework:** Comprehensive Applications of Big Data Technology (99), Python Programming (96), Data Acquisition and Preprocessing (96), Industry Big Data Application Analysis (96), Spark Big Data Analytics (93), Artificial Intelligence (93), Data Visualization Technology (93), and Mathematical Modeling (92).
 
-- **Research and teaching practice:** Served as a research and teaching assistant, contributed to curriculum redesign for courses including C Programming and Data Structures, supported research and teaching grant applications, and organized more than 1.5 million educational data records.
-
 </section>
 
 <section id="research-interests" data-nav-section markdown="1">
