@@ -168,6 +168,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 - **Second Prize**, May Day Mathematical Modeling Competition.
 - **First Prize**, Huashu Cup National Undergraduate Mathematical Modeling Competition.
 - **First Prize**, Shuwei Cup Undergraduate Mathematical Modeling Challenge.
+- **Third Prize**, 23rd Huawei Cup China Postgraduate Mathematical Contest in Modeling.
 - **Second Prize**, IPv6 Technology Application Innovation Competition and Next-Generation Internet Technology Innovation Competition.
 - **Gold Award (Guangdong Province)**, China International College Students’ Innovation Competition.
 - **National Bronze Award**, China International College Students’ Innovation Competition.
