@@ -8,7 +8,7 @@
 
 # 站点基础信息：用于浏览器标题、搜索结果和社交平台链接预览。
 title: "Zifan Cheng's Homepage"
-description: "Multimodal Learning · Affective Computing · AI Agents · Artificial Intelligence in Education"
+description: "Multimodal Learning · Affective Computing · AI Agents · Computer Vision"
 # url 填写正式域名且末尾不加斜杠；用户主页的 baseurl 保持为空。
 url: "https://starry-cz.github.io"
 baseurl: ""
@@ -31,7 +31,7 @@ author:
   name_en: "Zifan Cheng"
   # 中英文主页共用这张头像，换图时修改此处的路径。
   avatar: "images/cheng-zifan-illustrated-avatar.jpg"
-  bio: "多模态学习 · 情感计算 · 智能体 · 教育人工智能"
+  bio: "多模态学习 · 情感计算 · 智能体 · 计算机视觉"
   location: "广东，中国"
   employer: "广东技术师范大学"
   email: "chengzi@stu.gpnu.edu.cn"

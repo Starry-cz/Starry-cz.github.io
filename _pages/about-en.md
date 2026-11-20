@@ -2,7 +2,7 @@
 permalink: /
 title: ""
 seo_title: "Zifan Cheng's Homepage"
-excerpt: "Zifan Cheng's academic homepage, featuring research in multimodal learning, affective computing, AI agents, and artificial intelligence in education."
+excerpt: "Zifan Cheng's academic homepage, featuring research in multimodal learning, affective computing, AI agents, and computer vision."
 lang: "en"
 author_profile: true
 redirect_from:
@@ -24,9 +24,7 @@ redirect_from:
 
 <h2 id="about-me-heading" class="section-heading">💡 About Me</h2>
 
-I am **Zifan Cheng**, a graduate of the Data Science and Big Data Technology program at Guangdong Polytechnic Normal University. I ranked **1st out of 151 students** in comprehensive assessment for four consecutive years. During my undergraduate studies, my research centered on artificial intelligence, with a particular focus on multimodal perception and fusion, emotion understanding and reasoning, and the design and application of large language model agents.
-
-My research interests include <span class="research-badge badge-blue">Multimodal Learning</span>, <span class="research-badge badge-teal">Affective Computing</span>, <span class="research-badge badge-slate">AI Agents</span>, and <span class="research-badge badge-indigo">AI in Education</span>. I aim to bridge algorithmic research, system development, and real-world validation, producing work that is innovative, interpretable, reproducible, and practically valuable.
+My research interests include <span class="research-badge badge-blue">Multimodal Learning</span>, <span class="research-badge badge-teal">Affective Computing</span>, <span class="research-badge badge-slate">AI Agents</span>, and <span class="research-badge badge-indigo">Computer Vision</span>. I aim to bridge algorithmic research, system development, and real-world validation, producing work that is innovative, interpretable, reproducible, and practically valuable.
 
 As an undergraduate, I led or participated in **five research projects**, published **two academic papers** as first or second author, filed **six Chinese invention patent applications** as first or second inventor, and registered **eleven software copyrights**. The platforms I led have served **12,529 users** across **12 universities and organizations**.
 
@@ -53,7 +51,7 @@ Contact: [chengzi@stu.gpnu.edu.cn](mailto:chengzi@stu.gpnu.edu.cn)
 - **Multimodal Learning:** Unified representation, cross-modal alignment, and dynamic fusion of text, images, speech, and video, with an emphasis on long-context reasoning and reliable adaptive fusion under missing modalities, conflicting information, and distribution shifts.
 - **Affective Computing:** Fine-grained cross-modal emotion understanding, affective reasoning, personalized empathetic generation, and interpretable evaluation for multimodal large models and natural human–computer interaction.
 - **AI Agents:** Task planning, tool use, long-term memory, multi-agent collaboration, and self-reflection for large-model agents, with the goal of improving autonomy and reliability in open environments.
-- **Artificial Intelligence in Education:** Generative AI, learning analytics, knowledge modeling, and causal inference for complex learning scenarios such as programming education, emphasizing validation and deployment in authentic educational settings.
+- **Computer Vision:** Image and video understanding in complex scenes, with an emphasis on object monitoring, privacy protection in images and videos, and temporal video segmentation. Specific topics include object detection and tracking, sensitive region identification and anonymization, and temporal modeling for event boundary localization.
 
 </section>
 
