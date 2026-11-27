@@ -1,10 +1,9 @@
-<!-- 使用根路径生成图标地址，保证 / 和 /zh/ 两个页面都能正确加载。 -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
-<!-- 更换标签页图标后递增版本号，让浏览器重新加载图片。 -->
-{% assign favicon_version = 2 %}
+<!-- 更换图标时递增版本号，并同步 images/site.webmanifest 中的图标版本。 -->
+{% assign favicon_version = 3 %}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}?v={{ favicon_version }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}?v={{ favicon_version }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}?v={{ favicon_version }}">
-<link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}">
+<link rel="manifest" href="{{ '/images/site.webmanifest' | relative_url }}?v={{ favicon_version }}">
 
 <meta name="msapplication-TileColor" content="#000000">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
